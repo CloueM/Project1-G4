@@ -23,7 +23,59 @@ h1, h2 {
 
 
 
-/* KRISHIV'S SECTION */
+
+/* --- KRISHIV'S SECTION --- */
+/* --- KRISHIV'S SECTION --- */
+#krishiv {
+  padding: 60px 20px;
+  background-color: var(--primary); /* light background (white) */
+  color: var(--secondary);          /* light mode text (black) */
+  text-align: left;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+#krishiv h1 {
+  font-size: 2rem;
+  color: var(--accent); /* red heading in light mode */
+  margin-bottom: 20px;
+}
+
+#krishiv h2 {
+  font-size: 1.5rem;
+  color: #555; /* dark grey subtitle in light mode */
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+#krishiv p, #krishiv li {
+  max-width: 700px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+#krishiv ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+/* Dark mode */
+#krishiv.dark-mode {
+  background-color: #6a0dad; /* purple background */
+  color: #f0f0f0;            /* light text */
+}
+
+#krishiv.dark-mode h1 {
+  color: #ffffff;             /* white heading */
+}
+
+#krishiv.dark-mode h2 {
+  color: #cccccc;             /* charcoal for subtitle */
+}
+
+#krishiv.dark-mode p,
+#krishiv.dark-mode li {
+  color: #e0e0e0;             /* light grey text */
+}
 
 
 
