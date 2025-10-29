@@ -34,8 +34,34 @@ h1, h2 {
 
 
 /* ANNA'S SECTION */
+.pros,
+.cons {
+  margin: 2rem;
+  padding: 1rem 2rem 1rem 0rem;
+}
 
+.pros li,
+.cons li {
+  padding-bottom: 1rem;
+  display: block;
+}
 
+.pros h1,
+.cons h1 {
+  text-align: center;
+}
+
+.pros,
+.pros h1 {
+  background-color: #eee;
+  color: #1f1f1f;
+}
+
+.cons,
+.cons h1 {
+  background-color: #6b21a8;
+  color: #f8f0ff;
+}
 
 
 /* CREDIT SECTION */
@@ -45,5 +71,19 @@ h1, h2 {
 
 /* MEDIA QUERY */
 @media (min-width: 68em) {
+  
+  /* ANNA'S SECTION */
+  .pros-cons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .pros,
+  .cons {
+    width: 30rem;
+    margin: 0;
+  }
+
 
 }
