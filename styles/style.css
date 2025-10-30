@@ -21,6 +21,23 @@ h1, h2 {
 /* FAITH'S SECTION */
 
 
+  .intro-polaroid {
+    background-color: var(--primary);
+    border: solid 0.25rem #EBE8FF;
+    border-radius: 1.5rem;
+    padding: calc(var(--spacing) * 3);
+    margin: auto;
+    width: calc(var(--spacing) * 35); /* equivalent to 280px*/
+    display:flex;
+    flex-direction: column;
+    gap: calc(var(--spacing) * 4);
+  }
+
+  
+
+
+
+
 
 
 /* KRISHIV'S SECTION */
