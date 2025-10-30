@@ -19,7 +19,12 @@ h1, h2 {
 
 
 /* FAITH'S SECTION */
+  .intro h1 {
+    text-align: center;
+    color: var(--secondary);
+    font-size: calc(var(--spacing) * 3);
 
+  }
 
   .intro-polaroid {
     background-color: var(--primary);
@@ -32,6 +37,9 @@ h1, h2 {
     flex-direction: column;
     gap: calc(var(--spacing) * 4);
   }
+
+
+
 
   
 
