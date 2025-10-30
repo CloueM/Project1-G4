@@ -61,7 +61,18 @@ h1, h2 {
 
 
 
-  
+  /* MEDIA QUERY */
+@media (min-width: 68em) {
+  .intro-info {
+    margin: 0;
+    font-size: calc(var(--spacing) * 2);
+    color: var(--secondary);
+    text-align:left;
+
+  }
+
+
+}
 
 
 
