@@ -63,12 +63,12 @@ h1, h2 {
 
   /* MEDIA QUERY */
 @media (min-width: 68em) {
-  .intro-info {
-    margin: 0;
-    font-size: calc(var(--spacing) * 2);
-    color: var(--secondary);
-    text-align:left;
-
+    .intro-polaroid {
+    gap: calc(var(--spacing) * 4);
+    padding: calc(var(--spacing) * 5);
+    width:100%;
+    max-width: 560px;
+    
   }
 
 
