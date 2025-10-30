@@ -23,6 +23,68 @@ h1, h2 {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* START OF WHY DO THEY MATTER SECTION*/
+
+.importance {
+  padding: calc(var(--spacing) * 8); 
+}
+
+.importance-box {
+  border: solid 0.25rem;
+  border-radius: calc(var(--spacing)*1);
+}
+
+
+
 /* KRISHIV'S SECTION */
 
 
