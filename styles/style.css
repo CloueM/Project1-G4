@@ -46,6 +46,13 @@ h1, h2 {
     
   }
 
+    .intro-info {
+    margin: 0;
+    font-size: calc(var(--spacing) * 2);
+    color: var(--secondary);
+    text-align:left; 
+  }
+
 
 
 
