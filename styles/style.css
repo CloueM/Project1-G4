@@ -29,7 +29,7 @@ h1, h2 {
   .intro-polaroid {
     background-color: var(--primary);
     border: solid 0.25rem #EBE8FF;
-    border-radius: 1.5rem;
+    border-radius: calc(var(--spacing) * 1); 
     padding: calc(var(--spacing) * 3);
     margin: auto;
     width: calc(var(--spacing) * 35); /* equivalent to 280px*/
@@ -74,6 +74,8 @@ h1, h2 {
 
 }
 
+
+/* WHY THEY MATTER */
 
 
 
