@@ -75,13 +75,21 @@ h1, h2 {
 }
 
 
-/* Krishiv'S SECTION */
+/* WHY THEY MATTER */
 
-:root {
-  --primary: white;
-  --secondary: black;
-  --accent: red;
-  --spacing: 0.5rem;
+
+
+
+
+
+
+/* --- KRISHIV'S SECTION --- */
+#krishiv {
+  padding: 60px 20px;
+  background-color: var(--primary); /* light background (white) */
+  color: var(--secondary);          /* light mode text (black) */
+  text-align: left;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 /* ---------------- HEADINGS AND DESCRIPTION ---------------- */
@@ -193,8 +201,44 @@ h1 {
 
 
 /* ANNA'S SECTION */
+.pros,
+.cons {
+  margin: 2rem;
+  padding: 1rem 2rem 1rem 0rem;
+}
 
+.pros li,
+.cons li {
+  padding-bottom: 1rem;
+  display: block;
+}
 
+.pros h1,
+.cons h1 {
+  text-align: center;
+}
+
+.pros {
+  --changeMe: #eeeeee;
+  background-color: var(--changeMe);
+  color: #1f1f1f;
+}
+
+.pros h1 {
+  color: #1f1f1f;
+}
+
+.cons,
+.cons h1 {
+  background-color: #6b21a8;
+  color: #f8f0ff;
+}
+
+.change-me {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
 
 
 /* CREDIT SECTION */
@@ -204,5 +248,19 @@ h1 {
 
 /* MEDIA QUERY */
 @media (min-width: 68em) {
+  
+  /* ANNA'S SECTION */
+  .pros-cons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .pros,
+  .cons {
+    width: 30rem;
+    margin: 0;
+  }
+
 
 }
