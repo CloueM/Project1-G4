@@ -81,6 +81,117 @@ h1, h2 {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* START OF WHY DO THEY MATTER SECTION*/
+.importance h1 {
+   color: var(--secondary);
+}
+
+
+.importance {
+    
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  --card-width: calc(var(--spacing)* 32);
+  --card-height: calc(var(--spacing)* 42);
+  --border-width: 1px;
+  --border-color: #6B21A8;
+  --card-bg: #EBE8FF;
+  --h2-color:#6B21A8;
+
+}
+
+.importance-box {
+  width: var( --card-width);
+  height: var( --card-height);
+  flex-shrink: 0;
+  border: var(--border-width) solid var(--border-color);
+  background-color: var(--card-bg);
+  border-radius: calc(var(--spacing)*1);
+  padding: calc(var(--spacing)*2);
+  margin-bottom: calc(var(--spacing)*2);
+  box-shadow: 0 calc(var(--spacing) * 0.5) calc(var(--spacing) * 1) rgba(0, 0, 0, 0.1);
+  
+}
+
+.reason{
+ color:var(--h2-color);
+ text-align: center;
+}
+
+/* MEDIA QUERY */
+@media (min-width: 68em) {
+  .importance h1 {
+  width: 100%;
+  text-align: center;
+  margin-bottom: calc(var(--spacing) * 4);
+}
+
+.importance {
+  --card-width: calc(var(--spacing)* 42);
+  --card-height:calc(var(--spacing)* 44);
+   display: flex;
+  flex-direction: row;
+  flex-wrap:wrap;
+  justify-content:center;
+   gap: calc(var(--spacing) * 4); 
+    padding: calc(var(--spacing) * 4);
+}
+
+
+}
+
+
+
 /* KRISHIV'S SECTION */
 
 
