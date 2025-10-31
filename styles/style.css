@@ -78,7 +78,8 @@ h1, h2 {
   --card-width: calc(var(--spacing)* 32);
   --card-height: calc(var(--spacing)* 42);
   --border-width: 1px;
-  --border-color: #000000;
+  --border-color: #6B21A8;
+  --card-bg: #EBE8FF;
 }
 
 .importance-box {
@@ -86,8 +87,12 @@ h1, h2 {
   height: var( --card-height);
   flex-shrink: 0;
   border: var(--border-width) solid var(--border-color);
+  background-color: var(--card-bg);
   border-radius: calc(var(--spacing)*1);
- 
+  padding: calc(var(--spacing)*2);
+  margin-bottom: calc(var(--spacing)*2);
+  box-shadow: 0 calc(var(--spacing) * 0.5) calc(var(--spacing) * 1) rgba(0, 0, 0, 0.1);
+  
 }
 
 
