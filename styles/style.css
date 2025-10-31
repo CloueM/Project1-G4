@@ -5,6 +5,11 @@
   --spacing: 0.5rem; /* equivalent to 8px */
 }
 
+html {
+  scroll-behavior: smooth;
+	scroll-padding-top: 5rem; /* add spacing between each section */
+}
+
 body {
     background-color: var(--primary);
     color: var(--secondary);
@@ -20,9 +25,9 @@ h1, h2 {
 
 /* NAVIGATION BAR */
 .navigation {
+  background-color: var(--primary);
   position: fixed;
   top: 0;
-  background-color: green;
   height: 3rem;
   width: 100vw;
 }
@@ -32,10 +37,12 @@ h1, h2 {
 }
 
 .menu {
-  background-color: blue;
+  background-color: var(--primary);
   width: 50vw;
+  max-width: 15rem;
   height: 100vh;
   position: fixed;
+  top: 3rem;
   right: 0;
 }
 
@@ -46,19 +53,51 @@ h1, h2 {
 
 .menu li {
   display: block;
-  background-color: red;
   padding-top: 1rem;
   margin: 0rem 1rem;
 }
 
 .menu a {
-  background-color: yellow;
   display: block;
   text-decoration: none;
-  padding: 1rem;
+  padding: 0.5rem;
 }
 
+.menu img {
+  padding-right: 0.5rem;
+}
 
+.menu a img {
+  vertical-align: middle;
+}
+
+@media (min-width: 68em) {
+
+ .navigation {
+  width: 20rem;
+  border-right: 2px solid #eee;
+  height: 10rem;
+}
+
+.logo {
+  text-align: center;
+  padding: 2rem 0;
+  border-bottom: 2px solid #eee;
+}
+
+.menu {
+  max-width: 20rem;
+  position: relative;
+  left: 0;
+  border-right: 2px solid #eee;
+  top: 0;
+}
+
+.menu li {
+    margin: 0rem 2rem;
+}
+
+}
 
 
 /* FAITH'S SECTION */
