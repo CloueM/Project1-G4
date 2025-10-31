@@ -63,39 +63,40 @@ h1, h2 {
   padding: 0.5rem;
 }
 
-.menu img {
+.menu iconify-icon {
   padding-right: 0.5rem;
+  font-size: 1.5rem;
 }
 
-.menu a img {
-  vertical-align: middle;
+.menu a iconify-icon {
+  vertical-align: bottom;
 }
 
 @media (min-width: 68em) {
 
- .navigation {
-  width: 20rem;
-  border-right: 2px solid #eee;
-  height: 10rem;
-}
+  .navigation {
+    width: 20rem;
+    border-right: 2px solid #eee;
+    height: 10rem;
+  }
 
-.logo {
-  text-align: center;
-  padding: 2rem 0;
-  border-bottom: 2px solid #eee;
-}
+  .logo {
+    text-align: center;
+    padding: 2rem 0;
+    border-bottom: 2px solid #eee;
+  }
 
-.menu {
-  max-width: 20rem;
-  position: relative;
-  left: 0;
-  border-right: 2px solid #eee;
-  top: 0;
-}
+  .menu {
+    max-width: 20rem;
+    position: relative;
+    left: 0;
+    border-right: 2px solid #eee;
+    top: 0;
+  }
 
-.menu li {
-    margin: 0rem 2rem;
-}
+  .menu li {
+      margin: 0rem 2rem;
+  }
 
 }
 
