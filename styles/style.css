@@ -1,8 +1,32 @@
 :root {
-  --primary: white;
-  --secondary: black;
-  --accent: red;
-  --spacing: 0.5rem; /* equivalent to 8px */
+  --primary-accent: #6B21A8;
+  --secondary-accent: #F8F0FF;
+  --border: #EBE8FF;
+  --charcoal: #5B5D5F;
+
+  /* Light mode */
+  --light-background: #EEEEEE;
+  --light-text: #1F1F1F;
+  --light-secondary: #FFFFFF;
+
+  /* Dark mode */
+  --dark-background: #1F1F1F;
+  --dark-text: #EEEEEE;
+  --dark-secondary: #2A2A2A;
+
+  /* Mobile Text sizes (Converted to rem) */
+  --mobile-h1: 2rem;    /* 32px */
+  --mobile-h2: 1.5rem;  /* 24px */
+  --mobile-h3: 1.25rem; /* 20px */
+  --mobile-paragraph: 1rem; /* 16px */
+  --mobile-captions: 0.875rem; /* 14px */
+
+  /* Desktop Text sizes (Converted to rem) */
+  --desktop-h1: 4rem;   /* 64px */
+  --desktop-h2: 2rem;   /* 32px */
+  --desktop-h3: 1.5rem; /* 24px */
+  --desktop-paragraph: 1.25rem; /* 20px */
+  --desktop-captions: 1rem; /* 16px */
 }
 
 html {
@@ -21,7 +45,6 @@ body {
 h1, h2 {
     color: var(--accent);
 }
-
 
 /* NAVIGATION BAR */
 .navigation {
