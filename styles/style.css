@@ -133,15 +133,19 @@ h1, h2 {
 /* START OF WHY DO THEY MATTER SECTION*/
 
 .importance {
-  padding: calc(var(--spacing) * 3); 
+  --card-width: calc(var(--spacing)* 32);
+  --card-height: calc(var(--spacing)* 42);
   --border-width: 1px;
   --border-color: #000000;
 }
 
 .importance-box {
+  width: var( --card-width);
+  height: var( --card-height);
+  flex-shrink: 0;
   border: var(--border-width) solid var(--border-color);
   border-radius: calc(var(--spacing)*1);
-  padding: calc(var(--spacing) * 4);
+ 
 }
 
 
