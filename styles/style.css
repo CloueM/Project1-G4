@@ -10,11 +10,54 @@ body {
     color: var(--secondary);
     font-family: Arial, Helvetica, sans-serif;
     font-size: calc(var(--spacing) * 2);
+    margin-top: 5rem; /* shift body down for navigation */
 }
 
 h1, h2 {
     color: var(--accent);
 }
+
+
+/* NAVIGATION BAR */
+.navigation {
+  position: fixed;
+  top: 0;
+  background-color: green;
+  height: 3rem;
+  width: 100vw;
+}
+
+.logo {
+  display: block;
+}
+
+.menu {
+  background-color: blue;
+  width: 50vw;
+  height: 100vh;
+  position: fixed;
+  right: 0;
+}
+
+.menu ul {
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  display: block;
+  background-color: red;
+  padding-top: 1rem;
+  margin: 0rem 1rem;
+}
+
+.menu a {
+  background-color: yellow;
+  display: block;
+  text-decoration: none;
+  padding: 1rem;
+}
+
 
 
 
