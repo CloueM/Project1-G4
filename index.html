@@ -16,7 +16,7 @@
                 <li><a href="introduction">Faith's section</a></li>
                 <li><a href="#krishiv">Krishiv's section</a></li>
                 <li><a href="#cloue">Cloue's section</a></li>
-                <li><a href="#anna">Anna's section</a></li>
+                <li><a href="#pros-cons">Pros vs. Cons</a></li>
                 <li><a href="#credit">Credit</a></li>
             </ul>
         </nav>
@@ -149,9 +149,42 @@
 
 
         <!-- START OF ANNA'S SECTION -->
-        <section id="anna">
-            <h1>title</h1>
-            <p>details</p>
+        <section class="pros-cons" id="pros-cons">
+            <article class="pros">
+                <h1>Pros</h1>
+                <ul>
+                    <li><strong>Easy to read.</strong> Custom variables allow developers to add meaningful names to provide context for their variable.</li>
+                    <li><strong>Easy to update.</strong> Since custom variables are targeted at the root, it allows developers to change specifications such as colours, spacing, and font families in one place and have it apply globally.</li>
+                    <li><strong>Responsive design.</strong> Developers can use custom variables to set preferred themes such as having a light mode option and a dark mode option. Variables can also be overwritten in media queries. For example, a <span>calc()</span> function can be used to calculate the new font size in desktop view.</li>
+                    <li><strong>Fallback values.</strong> Similar to how fonts can have a fallback, developers can also set fallback values for their variables.</li>
+                    <li><strong>Can be manipulated with Javascript.</strong> Developers can target custom variables in their Javascript. This container is coded with a custom variable. Try changing the colour of this container below!</li>
+                </ul>
+
+                <div class="change-me">
+                    <span>Pick a color:</span>
+                    <input id="color" type="color" value="#eeeeee">
+
+                    <script>
+                        let color = document.getElementById('color');
+                        const bg = document.querySelector('.pros');
+
+                        color.addEventListener('change', function(newColor){
+                            bg.style.setProperty('--changeMe', newColor.target.value);
+                        });
+                    </script>
+                </div>
+            </article>
+
+            <article class="cons">
+                <h1>Cons</h1>
+                <ul>
+                    <li><strong>Overuse.</strong> Custom variables are great for global specifications such as naming primary and secondary colours, but overuse may complicate the code.</li>
+                    <li><strong>Improper naming.</strong> With the freedom to label custom variables with anything, improper naming conventions may lead to confusing codes.</li>
+                    <li><strong>Impact on performance.</strong> Overuse of custom variables can slow down performance during browser rendering.</li>
+                    <li><strong>Browser compatibility.</strong> Internet Explorer currently does not support custom variables.</li>
+                </ul>
+            </article>
+
         </section>
 
 
