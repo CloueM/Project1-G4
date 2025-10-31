@@ -1,8 +1,37 @@
 :root {
-  --primary: white;
-  --secondary: black;
-  --accent: red;
-  --spacing: 0.5rem; /* equivalent to 8px */
+  --primary-accent: #6B21A8;
+  --secondary-accent: #F8F0FF;
+  --border: #EBE8FF;
+  --charcoal: #5B5D5F;
+
+  /* Light mode */
+  --light-background: #EEEEEE;
+  --light-text: #1F1F1F;
+  --light-secondary: #FFFFFF;
+
+  /* Dark mode */
+  --dark-background: #1F1F1F;
+  --dark-text: #EEEEEE;
+  --dark-secondary: #2A2A2A;
+
+  /* Mobile Text sizes (Converted to rem) */
+  --mobile-h1: 2rem;    /* 32px */
+  --mobile-h2: 1.5rem;  /* 24px */
+  --mobile-h3: 1.25rem; /* 20px */
+  --mobile-paragraph: 1rem; /* 16px */
+  --mobile-captions: 0.875rem; /* 14px */
+
+  /* Desktop Text sizes (Converted to rem) */
+  --desktop-h1: 4rem;   /* 64px */
+  --desktop-h2: 2rem;   /* 32px */
+  --desktop-h3: 1.5rem; /* 24px */
+  --desktop-paragraph: 1.25rem; /* 20px */
+  --desktop-captions: 1rem; /* 16px */
+}
+
+html {
+  scroll-behavior: smooth;
+	scroll-padding-top: 5rem; /* add spacing between each section */
 }
 
 body {
@@ -10,12 +39,88 @@ body {
     color: var(--secondary);
     font-family: Arial, Helvetica, sans-serif;
     font-size: calc(var(--spacing) * 2);
+    margin-top: 5rem; /* shift body down for navigation */
 }
 
 h1, h2 {
     color: var(--accent);
 }
 
+/* NAVIGATION BAR */
+.navigation {
+  background-color: var(--primary);
+  position: fixed;
+  top: 0;
+  height: 3rem;
+  width: 100vw;
+}
+
+.logo {
+  display: block;
+}
+
+.menu {
+  background-color: var(--primary);
+  width: 50vw;
+  max-width: 15rem;
+  height: 100vh;
+  position: fixed;
+  top: 3rem;
+  right: 0;
+}
+
+.menu ul {
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  display: block;
+  padding-top: 1rem;
+  margin: 0rem 1rem;
+}
+
+.menu a {
+  display: block;
+  text-decoration: none;
+  padding: 0.5rem;
+}
+
+.menu img {
+  padding-right: 0.5rem;
+}
+
+.menu a img {
+  vertical-align: middle;
+}
+
+@media (min-width: 68em) {
+
+ .navigation {
+  width: 20rem;
+  border-right: 2px solid #eee;
+  height: 10rem;
+}
+
+.logo {
+  text-align: center;
+  padding: 2rem 0;
+  border-bottom: 2px solid #eee;
+}
+
+.menu {
+  max-width: 20rem;
+  position: relative;
+  left: 0;
+  border-right: 2px solid #eee;
+  top: 0;
+}
+
+.menu li {
+    margin: 0rem 2rem;
+}
+
+}
 
 
 /* FAITH'S SECTION */

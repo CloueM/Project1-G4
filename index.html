@@ -12,18 +12,31 @@
     <title>CSS Custom Properties</title>
     <link rel="stylesheet" href="styles/normalize-fwd.css">
     <link rel="stylesheet" href="styles/style.css">
+    <script src="scripts/script.js" defer></script>
 </head>
 <body>
-    
-    <header>
-        <nav>
+    <!--TODO: change src to iconify links-->
+    <header class="navigation">
+        <section class="logo">
+            <a href=""><img src="https://placehold.co/48x48" alt="CSS Custom Properties logo"></a>
+        </section>
+
+        <nav class="menu">
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="introduction">Faith's section</a></li>
-                <li><a href="#krishiv">Krishiv's section</a></li>
-                <li><a href="#cloue">Cloue's section</a></li>
-                <li><a href="#pros-cons">Pros vs. Cons</a></li>
-                <li><a href="#credit">Credit</a></li>
+                <li><a href="index.html">
+                    <img src="https://placehold.co/24x24" alt="Home">Welcome</a></li>
+                <li><a href="#intro">
+                    <img src="https://placehold.co/24x24" alt="Paper">Introduction</a></li>
+                <li><a href="#importance">
+                    <img src="https://placehold.co/24x24" alt="Sparkle">Why They Matter</a></li>
+                <li><a href="#krishiv">
+                    <img src="https://placehold.co/24x24" alt="Suitcase">Practical Reasons</a></li> 
+                <li><a href="#krishiv">
+                    <img src="https://placehold.co/24x24" alt="Stack of papers">Features</a></li> 
+                <li><a href="#pros-cons">
+                    <img src="https://placehold.co/24x24" alt="Balance scales">Pros/Cons</a></li>
+                <li><a href="#credits">
+                    <img src="https://placehold.co/24x24" alt="Copyright symbol">Credits</a></li>
             </ul>
         </nav>
     </header>
@@ -120,35 +133,34 @@
                 </section>
 
 
+    
+    <!-- TODO: Rename Sections ID-->
+    <!-- START OF KRISHIV'S SECTION -->
+    <section id="krishiv" class="dark-mode">
+        <h1>Why We Use CSS Custom Properties</h1>
+        <p>
+            <strong>CSS custom properties</strong>, also known as <strong>CSS variables</strong>, allow developers to store <span>reusable values</span> — like colors, font sizes, spacing, or layout dimensions — in one place. 
+            This helps make styling consistent across a website and makes updates easier, because changing the variable automatically updates all elements that use it.
+        </p>
 
+        <h2>Practical Uses of CSS Custom Properties</h2>
+        <ul>
+            <li><strong>Dark Mode:</strong> Easily switch themes by changing the variable values, instead of editing each element individually.</li>
+            <li><strong>Colors:</strong> Store main brand colors in variables for consistent design throughout the website.</li>
+            <li><strong>Fonts & Spacing:</strong> Quickly adjust typography and layout across the site by updating a few variables.</li>
+            <li><strong>Responsive Design:</strong> Use variables for breakpoints and flexible sizing, making it easier to adapt for mobile or desktop screens.</li>
+        </ul>
 
-        <!-- START OF KRISHIV'S SECTION -->
-        
-<section id="krishiv" class="dark-mode">
-  <h1>Why We Use CSS Custom Properties</h1>
-  <p>
-    <strong>CSS custom properties</strong>, also known as <strong>CSS variables</strong>, allow developers to store <span>reusable values</span> — like colors, font sizes, spacing, or layout dimensions — in one place. 
-    This helps make styling consistent across a website and makes updates easier, because changing the variable automatically updates all elements that use it.
-  </p>
-
-  <h2>Practical Uses of CSS Custom Properties</h2>
-  <ul>
-    <li><strong>Dark Mode:</strong> Easily switch themes by changing the variable values, instead of editing each element individually.</li>
-    <li><strong>Colors:</strong> Store main brand colors in variables for consistent design throughout the website.</li>
-    <li><strong>Fonts & Spacing:</strong> Quickly adjust typography and layout across the site by updating a few variables.</li>
-    <li><strong>Responsive Design:</strong> Use variables for breakpoints and flexible sizing, making it easier to adapt for mobile or desktop screens.</li>
-  </ul>
-
-  <p>
-    Using CSS custom properties improves maintainability, reduces errors, and makes websites more scalable and adaptable for future updates.
-  </p>
-</section>
+        <p>
+            Using CSS custom properties improves maintainability, reduces errors, and makes websites more scalable and adaptable for future updates.
+        </p>
+    </section>
 
 
 
 
         <!-- START OF CLOUE'S SECTION -->
-        <section id="cloue">
+        <section id="Demo-section">
             <h1>title</h1>
             <p>details</p>
         </section>
@@ -195,7 +207,7 @@
 
 
         <!-- CREDITS SECTION -->
-        <section id="credit">
+        <section id="credits">
             <p>credit links here</p>
         </section>
 
