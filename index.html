@@ -13,7 +13,7 @@
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="#faith">Faith's section</a></li>
+                <li><a href="introduction">Faith's section</a></li>
                 <li><a href="#krishiv">Krishiv's section</a></li>
                 <li><a href="#cloue">Cloue's section</a></li>
                 <li><a href="#anna">Anna's section</a></li>
@@ -25,32 +25,178 @@
     <main>
 
         <!-- START OF FAITH'S SECTION -->
-        <section id="faith">
-            <h1>title</h1>
-            <p>details</p>
+        <section class="intro" id="intro">
+            
+            <h1>An Introduction to CSS Custom Properties</h1>
+
+            <article class="introduction">
+            <div class="intro-polaroid">
+
+                   <pre class="code-block"><code>:root { <br>something will <br> go here later }</code></pre>
+
+            <h2 class="intro-sub">What are CSS Custom properties (also called CSS Variables)?</h2>
+            
+            <p class="intro-info">They are values that can be reused throughout your styles and defined once. When declaring your custom property, they always start with two dashes and are assigned a value (e.g. --main-color). This will also need to be used with the var() function. To store your values, it is common practice to define the variables on :root for easy management of colours, fonts, and spacing across your whole website.</p>
+            </div>
+        </article>
+
+
         </section>
 
 
-        <!-- START OF KRISHIV'S SECTION -->
+        <!--- WHY DOES IT MATTER?-->
+
+        <section class="importance" id="importance">
+                   <h1>Why does it matter?</h1>
+
+                <article class="why-it-matters">
+                <div class="importance-box">
+
+                    <h2 class="reason">Modernized CSS</h2>
+                    <p class="reason-explanation">Instead of relying on preprocessors like Sass, Custom Properties are built into CSS itself - faster, simpler and more powerful.</p>
+
+                </div>
+                </article>
+
+
+                <article class="why-it-matters">
+                <div class="importance-box">
+
+                    <h2 class="reason">More simplicity with the way we write css</h2>
+                    <p class="reason-explanation">With Custom properties, developers have the freedom to create their own reusable values - CSS couldn't do something like this before.</p>
+
+                </div>
+                </article>
+
+
+                <article class="why-it-matters">
+                <div class="importance-box">
+
+                    <h2 class="reason">Solves a Universal Problem</h2>
+                    <p class="reason-explanation">When custom properties weren't around, stylesheets were filled with random and repeated values. With Custom Properties, it makes every developer's life easier.</p>
+
+                </div>
+                </article>
+
+
+                <article class="why-it-matters">
+                <div class="importance-box">
+
+                    <h2 class="reason">More Scalable</h2>
+                    <p class="reason-explanation">Building big websites becomes easier to update and organized with the simplified and consistent rules that custom properties bring.</p>
+
+                </div>
+                </article>
+
+
+                <article class="why-it-matters">
+                <div class="importance-box">
+
+                    <h2 class="reason">They help developers work together</h2>
+                    <p class="reason-explanation">This matters because, as developers build big websites or projects,  they can share the same properties/variables for colours, fonts and spacing. This promotes consistency in everyone's design while still allowing room for individual creativity.</p>
+
+                </div>
+                </article>
+
+
+                <article class="why-it-matters">
+                <div class="importance-box">
+
+                    <h2 class="reason">Less errors and mistakes</h2>
+                    <p class="reason-explanation">Instead of retyping the values, reusing them helps prevent errors and broken designs.</p>
+
+                </div>
+                </article>
+
+                </section>
+
         
-<section id="krishiv" class="dark-mode">
-  <h1>Why We Use CSS Custom Properties</h1>
-  <p>
-    <strong>CSS custom properties</strong>, also known as <strong>CSS variables</strong>, allow developers to store <span>reusable values</span> — like colors, font sizes, spacing, or layout dimensions — in one place. 
+<!-- START OF KRISHIV'S SECTION -->
+<section id="krishiv">
+
+  <!-- ---------------- PRACTICAL USES HEADER ---------------- -->
+  <h1>Practical Reasons to Use CSS Custom Properties</h1>
+  <p class="main-desc">
+    CSS custom properties, also known as CSS variables, allow developers to store reusable values — like colors, font sizes, spacing, or layout dimensions — in one place. 
     This helps make styling consistent across a website and makes updates easier, because changing the variable automatically updates all elements that use it.
   </p>
 
-  <h2>Practical Uses of CSS Custom Properties</h2>
-  <ul>
-    <li><strong>Dark Mode:</strong> Easily switch themes by changing the variable values, instead of editing each element individually.</li>
-    <li><strong>Colors:</strong> Store main brand colors in variables for consistent design throughout the website.</li>
-    <li><strong>Fonts & Spacing:</strong> Quickly adjust typography and layout across the site by updating a few variables.</li>
-    <li><strong>Responsive Design:</strong> Use variables for breakpoints and flexible sizing, making it easier to adapt for mobile or desktop screens.</li>
-  </ul>
+  <!-- ---------------- BIG RECTANGLE FOR PRACTICAL USES ---------------- -->
+  <div class="big-rectangle">
 
-  <p>
-    Using CSS custom properties improves maintainability, reduces errors, and makes websites more scalable and adaptable for future updates.
+    <!-- Practical Uses Boxes -->
+    <div class="reason-cards">
+      <div class="card">
+        <div class="icon">⚡</div>
+        <h3>Dark Mode</h3>
+        <p>Easily switch themes by changing variable values, instead of editing each element individually.</p>
+      </div>
+
+      <div class="card">
+        <div class="icon">🎨</div>
+        <h3>Colors</h3>
+        <p>Store main brand colors in variables for consistent design throughout the website.</p>
+      </div>
+
+      <div class="card">
+        <div class="icon">🖋</div>
+        <h3>Fonts & Spacing</h3>
+        <p>Quickly adjust typography and layout across the site by updating a few variables.</p>
+      </div>
+
+      <div class="card">
+        <div class="icon">📱</div>
+        <h3>Responsive Design</h3>
+        <p>Use variables for breakpoints and flexible sizing, making it easier to adapt for mobile or desktop screens.</p>
+      </div>
+    </div>
+
+    <!-- Practical Summary Card -->
+    <div class="practical-summary-card">
+      Using CSS Custom Properties improves maintainability, reduces errors, and makes websites more scalable and adaptable for future updates.
+    </div>
+
+  </div> <!-- end practical-rectangle -->
+
+  <!-- ---------------- WHY WE USE HEADER ---------------- -->
+  <h1>Why We Use CSS Custom Properties</h1>
+  <p class="main-desc">
+    CSS custom properties, also known as CSS variables, allow developers to store reusable values — like colors, font sizes, spacing, or layout dimensions — in one place. 
+    This helps make styling consistent across a website and makes updates easier, because changing the variable automatically updates all elements that use it.
   </p>
+
+  <!-- ---------------- BIG RECTANGLE FOR WHY WE USE ---------------- -->
+  <div class="big-rectangle">
+
+    <!-- Why We Use Boxes -->
+    <div class="reason-cards">
+      <div class="card">
+        <div class="icon">⚡</div>
+        <h3>Easy Updates</h3>
+        <p>Change one variable to update the whole site instantly.</p>
+      </div>
+
+      <div class="card">
+        <div class="icon">🧩</div>
+        <h3>Reusability</h3>
+        <p>Use the same variable in multiple places to reduce repetition.</p>
+      </div>
+
+      <div class="card">
+        <div class="icon">📱</div>
+        <h3>Adaptability</h3>
+        <p>Quickly adjust layouts for mobile or desktop with flexible values.</p>
+      </div>
+
+      <div class="card">
+        <div class="icon">🎨</div>
+        <h3>Consistency</h3>
+        <p>Keep colors, fonts, and spacing uniform throughout your site.</p>
+      </div>
+    </div>
+
+  </div> <!-- end why-use-rectangle -->
+
 </section>
 
 
@@ -80,6 +226,7 @@
     <footer>
         &copy; 2025. For educational use only.
     </footer>
+
 
 
 </body>

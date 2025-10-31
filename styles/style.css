@@ -19,63 +19,170 @@ h1, h2 {
 
 
 /* FAITH'S SECTION */
+  .intro h1 {
+    text-align: center;
+    color: var(--secondary);
+    font-size: calc(var(--spacing) * 3);
+
+  }
+
+  .intro-polaroid {
+    background-color: var(--primary);
+    border: solid 0.25rem #EBE8FF;
+    border-radius: calc(var(--spacing) * 1); 
+    padding: calc(var(--spacing) * 3);
+    margin: auto;
+    width: calc(var(--spacing) * 35); /* equivalent to 280px*/
+    display:flex;
+    flex-direction: column;
+    gap: calc(var(--spacing) * 4);
+  }
+
+    .intro-sub{
+    margin: 0;
+    font-size: calc(var(--spacing) * 2);
+    color: var(--secondary);
+    text-align:left;
+    
+  }
+
+    .intro-info {
+    margin: 0;
+    font-size: calc(var(--spacing) * 2);
+    color: var(--secondary);
+    text-align:left; 
+  }
+
+    .code-block{
+    background-color: #f0e6ff;
+     padding: calc(var(--spacing) * 12) calc(var(--spacing) * 2);
+  }
 
 
 
 
+  
+@media (min-width: 68em) {
+    .intro-polaroid {
+    gap: calc(var(--spacing) * 4);
+    padding: calc(var(--spacing) * 5);
+    width:100%;
+    max-width: 560px;
+    
+  }
 
-/* --- KRISHIV'S SECTION --- */
-/* --- KRISHIV'S SECTION --- */
-#krishiv {
-  padding: 60px 20px;
-  background-color: var(--primary); /* light background (white) */
-  color: var(--secondary);          /* light mode text (black) */
-  text-align: left;
-  transition: background-color 0.3s, color 0.3s;
+
 }
 
-#krishiv h1 {
-  font-size: 2rem;
-  color: var(--accent); /* red heading in light mode */
-  margin-bottom: 20px;
+
+/* Krishiv'S SECTION */
+
+:root {
+  --primary: white;
+  --secondary: black;
+  --accent: red;
+  --spacing: 0.5rem;
 }
 
-#krishiv h2 {
-  font-size: 1.5rem;
-  color: #555; /* dark grey subtitle in light mode */
-  margin-top: 20px;
-  margin-bottom: 10px;
+/* ---------------- HEADINGS AND DESCRIPTION ---------------- */
+h1 {
+  color: var(--accent);
+  text-align: center;
+  font-size: calc(var(--spacing) * 5);
 }
 
-#krishiv p, #krishiv li {
-  max-width: 700px;
+.main-desc {
+  font-size: calc(var(--spacing) * 2.2);
+  text-align: center;
   line-height: 1.6;
-  margin-bottom: 15px;
+  margin-bottom: calc(var(--spacing) * 4);
 }
 
-#krishiv ul {
-  list-style-type: disc;
-  padding-left: 20px;
+/* ---------------- BIG RECTANGLE ---------------- */
+.big-rectangle {
+  background-color: #f9f9f9; /* rectangle behind boxes */
+  padding: calc(var(--spacing) * 6);
+  border-radius: calc(var(--spacing) * 1);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--spacing) * 4);
+  margin-bottom: calc(var(--spacing) * 6);
 }
 
-/* Dark mode */
-#krishiv.dark-mode {
-  background-color: #6a0dad; /* purple background */
-  color: #f0f0f0;            /* light text */
+/* ---------------- FOUR BOXES ---------------- */
+.reason-cards {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--spacing) * 3);
 }
 
-#krishiv.dark-mode h1 {
-  color: #ffffff;             /* white heading */
+.card {
+  background-color: var(--primary);
+  border: solid 0.25rem #EBE8FF;
+  border-radius: calc(var(--spacing) * 1);
+  padding: calc(var(--spacing) * 3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-#krishiv.dark-mode h2 {
-  color: #cccccc;             /* charcoal for subtitle */
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
 
-#krishiv.dark-mode p,
-#krishiv.dark-mode li {
-  color: #e0e0e0;             /* light grey text */
+.card .icon {
+  font-size: calc(var(--spacing) * 5);
+  margin-bottom: calc(var(--spacing) * 2);
 }
+
+.card h3 {
+  margin: 0.5rem 0;
+  color: var(--accent);
+}
+
+.card p {
+  font-size: calc(var(--spacing) * 2);
+  line-height: 1.5;
+}
+
+/* ---------------- PRACTICAL SUMMARY POLAROID ---------------- */
+.practical-summary-card {
+  background-color: var(--primary);
+  border: solid 0.25rem #EBE8FF;
+  border-radius: calc(var(--spacing) * 1);
+  padding: calc(var(--spacing) * 3);
+  text-align: center;
+  font-size: calc(var(--spacing) * 2);
+  font-weight: bold;
+  margin: calc(var(--spacing) * 4) auto 0 auto;
+  max-width: 600px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.practical-summary-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+@media (min-width: 68em) {
+  .reason-cards {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .card {
+    flex: 1 1 calc(25% - calc(var(--spacing) * 3));
+    max-width: 250px;
+  }
+}
+
 
 
 
