@@ -12,12 +12,18 @@
 <body>
     
     <header class="navigation">
-        <section class="logo">
-            <a href=""><img src="https://placehold.co/48x48" alt="CSS Custom Properties logo"></a>
+        <section class="logo-hamburger">
+            <div class="logo">
+                <a href=""><img src="https://placehold.co/48x48" alt="CSS Custom Properties logo"></a>
+            </div>
+
+            <div class="hamburger">
+                <iconify-icon icon="quill:hamburger" id="hamburger-button"></iconify-icon>
+            </div>
         </section>
 
         <nav class="menu">
-            <ul>
+            <ul id="menu-list">
                 <li><a href="index.html">
                     <iconify-icon icon="mynaui:home"></iconify-icon>Welcome</a></li>
                 <li><a href="#intro">
@@ -30,6 +36,8 @@
                     <iconify-icon icon="ri:stack-line"></iconify-icon>Features</a></li> 
                 <li><a href="#pros-cons">
                     <iconify-icon icon="material-symbols:balance"></iconify-icon>Pros/Cons</a></li>
+                <li><a href="#demo">
+                    <iconify-icon icon="material-symbols:computer-outline"></iconify-icon>Demo</a></li>
                 <li><a href="#credits">
                     <iconify-icon icon="ic:baseline-copyright"></iconify-icon>Credits</a></li>
             </ul>
@@ -154,14 +162,6 @@
 
 
 
-
-        <!-- START OF CLOUE'S SECTION -->
-        <section id="cloue">
-            <h1>title</h1>
-            <p>details</p>
-        </section>
-
-
         <!-- START OF ANNA'S SECTION -->
         <section class="pros-cons" id="pros-cons">
             <article class="pros">
@@ -177,15 +177,6 @@
                 <div class="change-me">
                     <span>Pick a color:</span>
                     <input id="color" type="color" value="#eeeeee">
-
-                    <script>
-                        let color = document.getElementById('color');
-                        const bg = document.querySelector('.pros');
-
-                        color.addEventListener('change', function(newColor){
-                            bg.style.setProperty('--changeMe', newColor.target.value);
-                        });
-                    </script>
                 </div>
             </article>
 
@@ -199,6 +190,17 @@
                 </ul>
             </article>
 
+        </section>
+
+
+
+
+
+
+        <!-- START OF CLOUE'S SECTION -->
+        <section id="cloue">
+            <h1>title</h1>
+            <p>details</p>
         </section>
 
 

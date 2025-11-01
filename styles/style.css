@@ -25,23 +25,38 @@ h1, h2 {
 
 /* NAVIGATION BAR */
 .navigation {
-  background-color: var(--primary);
+  background-color: #fff;
   position: fixed;
   top: 0;
   height: 3rem;
   width: 100vw;
 }
 
-.logo {
-  display: block;
+.logo-hamburger {
+  display: flex;
+  justify-content: space-between;
+}
+
+.hamburger {
+  font-size: 3rem;
+}
+
+#menu-list {
+  width: 0;
+  height: 100vh;
+  overflow: hidden;
+  transition: width .7s ease;
+}
+
+#menu-list.toggled {
+    width: 70vw;
 }
 
 .menu {
-  background-color: var(--primary);
-  width: 50vw;
+  background-color: #fff;
+  position: fixed;
   max-width: 15rem;
   height: 100vh;
-  position: fixed;
   top: 3rem;
   right: 0;
 }
@@ -59,13 +74,15 @@ h1, h2 {
 
 .menu a {
   display: block;
+  padding: 0.5rem 0.5rem 0.5rem 1rem;
   text-decoration: none;
-  padding: 0.5rem;
+  text-wrap: nowrap;
+  color: #1f1f1f;
 }
 
 .menu iconify-icon {
   padding-right: 0.5rem;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 
 .menu a iconify-icon {
@@ -76,8 +93,11 @@ h1, h2 {
 
   .navigation {
     width: 20rem;
-    border-right: 2px solid #eee;
     height: 10rem;
+  }
+
+  .logo-hamburger {
+    display: block;
   }
 
   .logo {
@@ -86,12 +106,30 @@ h1, h2 {
     border-bottom: 2px solid #eee;
   }
 
+  .hamburger {
+    display: none;
+  }
+
+  #menu-list {
+    width: 100%;
+}
+
   .menu {
     max-width: 20rem;
     position: relative;
     left: 0;
-    border-right: 2px solid #eee;
     top: 0;
+  }
+
+  .menu a {
+    border: 1px solid transparent;
+  }
+
+  .menu a:hover{
+    background-color: #F8F0FF;
+    color: #6B21A8;
+    border-radius: 1rem;
+    border: 1px solid #EBE8FF;
   }
 
   .menu li {
@@ -99,6 +137,8 @@ h1, h2 {
   }
 
 }
+
+
 
 
 /* FAITH'S SECTION */
