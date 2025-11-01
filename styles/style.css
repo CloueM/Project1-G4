@@ -41,6 +41,7 @@ body {
     font-size: var(--mobile-paragraph);
     margin-top: 5rem; /* shift body down for navigation */
 }
+
 @media (min-width: 68em){
   main {
     margin-left: 320px;
@@ -51,7 +52,19 @@ h1, h2 {
     color: var(--accent);
 }
 
+/* Making sure that each section max height is the screen size */
+main > section {
+  min-height: calc(100vh - 5rem);
+}
+@media (min-width: 68em){
+  body {
+    margin-top:0;
+  }
 
+  main > section {
+    min-height:100vh;
+  }
+}
 
 /* NAVIGATION BAR */
 .navigation {
