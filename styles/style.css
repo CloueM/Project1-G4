@@ -35,19 +35,38 @@ html {
 }
 
 body {
-    background-color: var(--primary);
-    color: var(--secondary);
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: calc(var(--spacing) * 2);
+    background-color: var(--light-background);
+    color: var(--light-text);
+    font-family: "DM Sans", sans-serif;
+    font-size: var(--mobile-paragraph);
     margin-top: 5rem; /* shift body down for navigation */
+}
+
+@media (min-width: 68em){
+  main {
+    margin-left: 320px;
+  }
 }
 
 h1, h2 {
     color: var(--accent);
 }
 
+/* Making sure that each section max height is the screen size */
+main > section {
+  min-height: 100vh;
 
+}
+@media (min-width: 68em){
+  body {
+    margin-top:0;
+  }
 
+  main > section {
+    min-height:100vh;
+  }
+}
+/*---------------------------------------------------------------*/
 /* NAVIGATION BAR */
 .navigation {
   background-color: #fff;
@@ -55,6 +74,7 @@ h1, h2 {
   top: 0;
   height: 3rem;
   width: 100vw;
+  z-index: 100;
 }
 
 .logo-hamburger {
@@ -131,10 +151,9 @@ h1, h2 {
 }
 
 @media (min-width: 68em) {
-
   .navigation {
     width: 20rem;
-    height: 10rem;
+    height: 100vh;
   }
 
   .logo-hamburger {
@@ -481,4 +500,60 @@ h1, h2 {
   }
 
 
+}
+
+/*FOOTER*/
+.site-footer {
+  padding: 1.5rem 1rem;
+  text-align: center;
+  background-color: var(--secondary-accent);
+  color: var(--light-text);
+  font-size: var(--mobile-captions);
+  border-top: 1px solid var(--border);
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+html[data-theme="dark"] .site-footer {
+  background-color: var(--dark-secondary);
+  color: var(--dark-text);
+  border-top-color: var(--charcoal);
+}
+/* Hiding the nav footer in nav when in mobile */
+.nav-footer {
+  display: none;
+}
+
+@media (min-width: 68em) {
+  /* Hide the header footer on desktop */
+  .site-footer {
+    display: none;
+  }
+
+  /* Show and position the nav-footer on desktop */
+  .nav-footer {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--secondary-accent);
+    color: var(--primary-accent);     
+    padding: 1.5rem;
+    text-align: center;
+    font-size: var(--mobile-captions);
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  .nav-footer p {
+    margin: 0;
+  }
+
+  .nav-footer iconify-icon {
+    vertical-align: middle;
+    font-size: 1.2rem;
+  }
 }
