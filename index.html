@@ -13,30 +13,41 @@
     <link rel="stylesheet" href="styles/normalize-fwd.css">
     <link rel="stylesheet" href="styles/style.css">
     <script src="scripts/script.js" defer></script>
+    <script src="https://code.iconify.design/iconify-icon/3.0.0/iconify-icon.min.js"></script>
 </head>
 <body>
     <!--TODO: change src to iconify links-->
     <header class="navigation">
-        <section class="logo">
-            <a href=""><img src="https://placehold.co/48x48" alt="CSS Custom Properties logo"></a>
+        <section class="logo-hamburger">
+            <div class="logo">
+                <a href=""><img src="https://placehold.co/48x48" alt="CSS Custom Properties logo"></a>
+            </div>
+
+            <div class="hamburger" id="hamburger">
+                 <span class="bar1"></span>
+                 <span class="bar2"></span>
+                 <span class="bar3"></span>
+            </div>
         </section>
 
         <nav class="menu">
-            <ul>
+            <ul id="menu-list">
                 <li><a href="index.html">
-                    <img src="https://placehold.co/24x24" alt="Home">Welcome</a></li>
+                    <iconify-icon icon="mynaui:home"></iconify-icon>Welcome</a></li>
                 <li><a href="#intro">
-                    <img src="https://placehold.co/24x24" alt="Paper">Introduction</a></li>
+                    <iconify-icon icon="iconoir:page"></iconify-icon>Introduction</a></li>
                 <li><a href="#importance">
-                    <img src="https://placehold.co/24x24" alt="Sparkle">Why They Matter</a></li>
+                    <iconify-icon icon="proicons:sparkle-2"></iconify-icon>Why They Matter</a></li>
                 <li><a href="#krishiv">
-                    <img src="https://placehold.co/24x24" alt="Suitcase">Practical Reasons</a></li> 
+                    <iconify-icon icon="iconoir:suitcase"></iconify-icon>Practical Reasons</a></li> 
                 <li><a href="#krishiv">
-                    <img src="https://placehold.co/24x24" alt="Stack of papers">Features</a></li> 
+                    <iconify-icon icon="ri:stack-line"></iconify-icon>Features</a></li> 
                 <li><a href="#pros-cons">
-                    <img src="https://placehold.co/24x24" alt="Balance scales">Pros/Cons</a></li>
+                    <iconify-icon icon="material-symbols:balance"></iconify-icon>Pros/Cons</a></li>
+                <li><a href="#demo">
+                    <iconify-icon icon="material-symbols:computer-outline"></iconify-icon>Demo</a></li>
                 <li><a href="#credits">
-                    <img src="https://placehold.co/24x24" alt="Copyright symbol">Credits</a></li>
+                    <iconify-icon icon="ic:baseline-copyright"></iconify-icon>Credits</a></li>
             </ul>
         </nav>
     </header>
@@ -105,7 +116,6 @@
             </article>
         </section>
 
-
         <!-- TODO: Rename Sections ID-->
         <!-- WHY WE USE CSS CUSTOM PROPERTIES SECTION -->
         <section id="krishiv" class="dark-mode">
@@ -144,14 +154,6 @@
                 <div class="change-me">
                     <span>Pick a color:</span>
                     <input id="color" type="color" value="#eeeeee">
-                    <script>
-                        let color = document.getElementById('color');
-                        const bg = document.querySelector('.pros');
-
-                        color.addEventListener('change', function(newColor){
-                            bg.style.setProperty('--changeMe', newColor.target.value);
-                        });
-                    </script>
                 </div>
             </article>
 
@@ -175,8 +177,5 @@
     <footer>
         &copy; 2025. For educational use only.
     </footer>
-
-
-
 </body>
 </html>

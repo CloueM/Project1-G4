@@ -46,25 +46,58 @@ h1, h2 {
     color: var(--accent);
 }
 
+
+
 /* NAVIGATION BAR */
 .navigation {
-  background-color: var(--primary);
+  background-color: #fff;
   position: fixed;
   top: 0;
   height: 3rem;
   width: 100vw;
 }
 
-.logo {
+.logo-hamburger {
+  display: flex;
+  justify-content: space-between;
+}
+
+.hamburger span {
   display: block;
+  width: 2rem;
+  height: 4px;
+  margin: 0.5rem;
+  background-color: var(--primary-accent);
+  transition: .7s ease;
+  border-radius: 1rem;
+}
+
+.hamburger.toggled .bar1 {
+  transform: translateY(1rem) rotate(45deg);
+}
+.hamburger.toggled .bar2 {
+  opacity: 0;
+}
+.hamburger.toggled .bar3 {
+  transform: translateY(-0.5rem) rotate(-45deg);
+}
+
+#menu-list {
+  width: 0;
+  height: 100vh;
+  overflow: hidden;
+  transition: width .7s ease;
+}
+
+#menu-list.toggled {
+  width: 70vw;
 }
 
 .menu {
-  background-color: var(--primary);
-  width: 50vw;
+  background-color: #fff;
+  position: fixed;
   max-width: 15rem;
   height: 100vh;
-  position: fixed;
   top: 3rem;
   right: 0;
 }
@@ -82,45 +115,71 @@ h1, h2 {
 
 .menu a {
   display: block;
+  padding: 0.5rem 0.5rem 0.5rem 1rem;
   text-decoration: none;
-  padding: 0.5rem;
+  text-wrap: nowrap;
+  color: var(--light-text);
 }
 
-.menu img {
+.menu iconify-icon {
   padding-right: 0.5rem;
+  font-size: 1.2rem;
 }
 
-.menu a img {
-  vertical-align: middle;
+.menu a iconify-icon {
+  vertical-align: bottom;
 }
 
 @media (min-width: 68em) {
 
- .navigation {
-  width: 20rem;
-  border-right: 2px solid #eee;
-  height: 10rem;
+  .navigation {
+    width: 20rem;
+    height: 10rem;
+  }
+
+  .logo-hamburger {
+    display: block;
+  }
+
+  .logo {
+    text-align: center;
+    padding: 2rem 0;
+    border-bottom: 2px solid #eee;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  #menu-list {
+    width: 100%;
 }
 
-.logo {
-  text-align: center;
-  padding: 2rem 0;
-  border-bottom: 2px solid #eee;
+  .menu {
+    max-width: 20rem;
+    position: relative;
+    left: 0;
+    top: 0;
+  }
+
+  .menu a {
+    border: 1px solid transparent;
+  }
+
+  .menu a:hover{
+    background-color: #F8F0FF;
+    color: #6B21A8;
+    border-radius: 1rem;
+    border: 1px solid #EBE8FF;
+  }
+
+  .menu li {
+      margin: 0rem 2rem;
+  }
+
 }
 
-.menu {
-  max-width: 20rem;
-  position: relative;
-  left: 0;
-  border-right: 2px solid #eee;
-  top: 0;
-}
 
-.menu li {
-    margin: 0rem 2rem;
-}
-
-}
 
 
 /* FAITH'S SECTION */
