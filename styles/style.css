@@ -46,6 +46,8 @@ h1, h2 {
     color: var(--accent);
 }
 
+
+
 /* NAVIGATION BAR */
 .navigation {
   background-color: #fff;
@@ -60,8 +62,24 @@ h1, h2 {
   justify-content: space-between;
 }
 
-.hamburger {
-  font-size: 3rem;
+.hamburger span {
+  display: block;
+  width: 2rem;
+  height: 4px;
+  margin: 0.5rem;
+  background-color: var(--primary-accent);
+  transition: .7s ease;
+  border-radius: 1rem;
+}
+
+.hamburger.toggled .bar1 {
+  transform: translateY(1rem) rotate(45deg);
+}
+.hamburger.toggled .bar2 {
+  opacity: 0;
+}
+.hamburger.toggled .bar3 {
+  transform: translateY(-0.5rem) rotate(-45deg);
 }
 
 #menu-list {
@@ -72,7 +90,7 @@ h1, h2 {
 }
 
 #menu-list.toggled {
-    width: 70vw;
+  width: 70vw;
 }
 
 .menu {
@@ -100,7 +118,7 @@ h1, h2 {
   padding: 0.5rem 0.5rem 0.5rem 1rem;
   text-decoration: none;
   text-wrap: nowrap;
-  color: #1f1f1f;
+  color: var(--light-text);
 }
 
 .menu iconify-icon {
