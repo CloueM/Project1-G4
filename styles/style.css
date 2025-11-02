@@ -198,6 +198,70 @@ main > section {
 
 }
 
+/*HOMEPAGE*/
+/* Welcome Section Styles */
+
+#welcome-section {
+  min-height: 100vh;
+  display:flex;
+  align-items: center;
+  justify-content:center;
+}
+
+.welcome-content {
+  background-color: var(--light-secondary);
+  width: 100%;
+  max-width: 1920px;
+
+  
+ 
+}
+
+.logo-title-container {
+ position:relative;
+   min-height: 12rem;
+   margin: 0 auto;
+   width:max-content;
+   
+}
+
+.logo-wrapper{
+  position:relative;
+  top:4rem;
+  right: 5rem;
+
+
+}
+
+.title-wrapper{
+  position:absolute;
+  top:5rem;
+ left:3rem;
+}
+
+
+.homepage-logo {
+  margin: 0;
+  display: block;
+  width:8rem;
+  height:auto;
+  
+
+}
+
+.welcome-content h1 {
+  font-size: var(--mobile-h1);
+   margin: 0; 
+   padding: 0;
+    width: 1\rem;
+}
+
+.group-name {
+   margin-top: 2rem;
+   text-align: center;
+   padding: 0rem 2rem;
+
+}
 
 
 
