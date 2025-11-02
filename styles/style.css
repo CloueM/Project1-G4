@@ -212,9 +212,8 @@ main > section {
   background-color: var(--light-secondary);
   width: 100%;
   max-width: 1920px;
-
+  padding-bottom: 5rem;
   
- 
 }
 
 .logo-title-container {
@@ -253,13 +252,31 @@ main > section {
   font-size: var(--mobile-h1);
    margin: 0; 
    padding: 0;
-    width: 1\rem;
+    width: 1rem;
 }
 
 .group-name {
    margin-top: 2rem;
    text-align: center;
    padding: 0rem 2rem;
+   font-size: var(--mobile-h3);
+   font-weight: 100;
+
+}
+
+.names-container {
+  display:flex;
+  flex-wrap:wrap;
+  gap: 0.5rem;
+  justify-content:center;
+}
+
+.name {
+
+  background-color: var(--secondary-accent);
+  padding: 0.3rem 1rem;
+  border-radius: 1.5rem;
+  font-weight:600;
 
 }
 
