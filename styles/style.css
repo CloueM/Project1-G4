@@ -202,16 +202,40 @@ main > section {
 
 
 /* FAITH'S SECTION */
-  .intro h1 {
+
+/* Scoped overrides for Faith’s section */
+.intro,
+.importance {
+  --spacing: 0.5rem;  
+  --primary: var(--light-background);
+  --secondary: var(--light-text);
+  --accent: var(--primary-accent);
+  --border-color: var(--border);
+
+  --card-bg: #EBE8FF;
+  --highlight-bg: #f0e6ff;
+
+  --card-width: calc(var(--spacing) *32);
+  --card-height:calc(var(--spacing) *42);
+  --border-width: 1px;
+  --polaroid-bg: var(--light-secondary);  
+
+}
+
+  .intro h1,
+  .importance h1{
     text-align: center;
     color: var(--secondary);
-    font-size: calc(var(--spacing) * 3);
+    font-size: var( --mobile-h1);
+    margin-top: calc(var(--spacing) * 5);     
+  margin-bottom: calc(var(--spacing) * 3);
+    
 
   }
 
   .intro-polaroid {
-    background-color: var(--primary);
-    border: solid 0.25rem #EBE8FF;
+    background-color: var(--polaroid-bg);
+    border: solid 0.5rem var(--border-color);
     border-radius: calc(var(--spacing) * 1); 
     padding: calc(var(--spacing) * 3);
     margin: auto;
@@ -221,7 +245,8 @@ main > section {
     gap: calc(var(--spacing) * 4);
   }
 
-    .intro-sub{
+    .intro-sub,
+    .intro-info {
     margin: 0;
     font-size: calc(var(--spacing) * 2);
     color: var(--secondary);
@@ -229,94 +254,17 @@ main > section {
     
   }
 
-    .intro-info {
-    margin: 0;
-    font-size: calc(var(--spacing) * 2);
-    color: var(--secondary);
-    text-align:left; 
-  }
+  
+
 
     .code-block{
-    background-color: #f0e6ff;
+    background-color: var(--highlight-bg);
      padding: calc(var(--spacing) * 12) calc(var(--spacing) * 2);
   }
 
 
 
-
-  /* MEDIA QUERY */
-@media (min-width: 68em) {
-    .intro-polaroid {
-    gap: calc(var(--spacing) * 4);
-    padding: calc(var(--spacing) * 5);
-    width:100%;
-    max-width: 560px;
-    
-  }
-
-
-}
-
-
-/* WHY THEY MATTER */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* START OF WHY DO THEY MATTER SECTION*/
-.importance h1 {
-   color: var(--secondary);
-}
 
 
 .importance {
@@ -324,12 +272,7 @@ main > section {
   display: flex;
   flex-direction: column;
   align-items: center; 
-  --card-width: calc(var(--spacing)* 32);
-  --card-height: calc(var(--spacing)* 42);
-  --border-width: 1px;
-  --border-color: #6B21A8;
-  --card-bg: #EBE8FF;
-  --h2-color:#6B21A8;
+ 
 
 }
 
@@ -347,29 +290,66 @@ main > section {
 }
 
 .reason{
- color:var(--h2-color);
+ color:var(--accent);
  text-align: center;
 }
 
 /* MEDIA QUERY */
 @media (min-width: 68em) {
+  .intro h1,
   .importance h1 {
+  font-size: var( --desktop-h1);
   width: 100%;
   text-align: center;
   margin-bottom: calc(var(--spacing) * 4);
+
 }
+
+ .intro-polaroid {
+ 
+    padding: calc(var(--spacing) * 5);
+    width:100%;
+    max-width: 800px;
+    
+  }
+
+  .code-block{
+  font-size:var( --mobile-h2);
+}
+
+.intro-sub,
+.reason {
+  font-size:var(--desktop-h2);
+}
+
+.intro-info,
+.reason-explanation{
+    font-size: var(--desktop-paragraph);
+  
+}
+
 
 .importance {
   --card-width: calc(var(--spacing)* 42);
-  --card-height:calc(var(--spacing)* 44);
+  --card-height:calc(var(--spacing)* 50);
    display: flex;
   flex-direction: row;
   flex-wrap:wrap;
   justify-content:center;
-   gap: calc(var(--spacing) * 4); 
-    padding: calc(var(--spacing) * 4);
+   gap: calc(var(--spacing) * 3); 
+  padding: calc(var(--spacing) * 4);
+  margin: calc(var(--spacing) * 8);
+
 }
 
+.importance-box {
+  transition: box-shadow 0.3 ease, transform 0.3 ease;
+}
+
+.importance-box:hover {
+  box-shadow: 0 0 20px var(--accent); 
+  transform: scale(1.02);
+}
 
 }
 
