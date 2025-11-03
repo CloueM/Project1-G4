@@ -256,10 +256,10 @@ main > section {
 }
 
 .group-name {
-   margin-top: 2rem;
+   margin-top: 1rem;
    text-align: center;
-   padding: 0rem 2rem;
-   font-size: var(--mobile-h3);
+   padding: 0rem 1rem;
+   font-size: var(--mobile-paragraph);
    font-weight: 100;
 
 }
@@ -289,7 +289,7 @@ main > section {
   }
     
     .logo-title-container {
-       margin-left: 25rem;
+       margin-left: 28rem;
 
   }
 
@@ -315,6 +315,17 @@ main > section {
   .homepage-logo {
     width: 12rem;
     height:auto;
+  }
+
+  .group-name{
+    position:relative;
+    top: -2rem;
+    font-size: var(--desktop-paragraph)
+    
+  }
+
+  .name{
+    padding: 1rem 4rem;
   }
 }
 
