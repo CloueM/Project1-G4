@@ -58,8 +58,24 @@
     <main>
         <!--WELCOME SECTION-->
         <section id="welcome-section">
-            <p>Welcome section here</p>
-            <!--TODO: Welcome section content-->
+        <div class="welcome-page-background"></div>
+
+    <div class="welcome-content">
+
+        <h1>CSS Custom Properties</h1>
+        <img src="welcome-page-logo.svg" alt="logo for welcome page" class="homepage-logo">
+        <p class="group-name">FWDP 2000 Web Development 2 Project 1 Group 4</p>
+        
+      <div class="names-container">
+        <div class="name">Krishiv</div>
+        <div class="name">Anna</div>
+        <div class="name">Faith</div>
+        <div class="name">Cloue</div>
+      </div>
+
+        
+        
+    </div>
         </section>
 
         <!-- INTRODUCTION SECTION -->
@@ -67,7 +83,9 @@
             <h1>An Introduction to CSS Custom Properties</h1>
             <article class="introduction">
                 <div class="intro-polaroid">
-                    <pre class="code-block"><code>:root { <br>something will <br> go here later }</code></pre>
+                    <pre class="code-block"><code>:root { 
+                        <br> --main-color
+               }</code></pre>
                     <h2 class="intro-sub">What are CSS Custom properties (also called CSS Variables)?</h2>
                     <p class="intro-info">They are values that can be reused throughout your styles and defined once. When declaring your custom property, they always start with two dashes and are assigned a value (e.g. --main-color). This will also need to be used with the var() function. To store your values, it is common practice to define the variables on :root for easy management of colours, fonts, and spacing across your whole website.</p>
                 </div>
