@@ -252,7 +252,7 @@ main > section {
   font-size: var(--mobile-h1);
    margin: 0; 
    padding: 0;
-    width: 1rem;
+
 }
 
 .group-name {
@@ -274,10 +274,48 @@ main > section {
 .name {
 
   background-color: var(--secondary-accent);
-  padding: 0.3rem 1rem;
+  padding: 0.3rem 0.7rem;
   border-radius: 1.5rem;
   font-weight:600;
 
+}
+
+@media (min-width: 68em) {
+
+  .welcome-content{
+    position: relative;
+     min-height: 80vh;
+
+  }
+    
+    .logo-title-container {
+       margin-left: 25rem;
+
+  }
+
+  .title-wrapper{
+    position:static;
+    margin-left: 15rem;
+    margin-top: 15rem
+   
+  }
+  .welcome-content h1{
+     font-size: var(--desktop-h1);
+     max-width: 20ch;
+     line-height: 1.1;
+    
+  }
+
+  .logo-wrapper{
+    position:absolute;
+    top: -2rem;
+    left: 2rem;
+  }
+
+  .homepage-logo {
+    width: 12rem;
+    height:auto;
+  }
 }
 
 
