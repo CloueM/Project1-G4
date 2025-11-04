@@ -31,7 +31,15 @@
 
 html {
   scroll-behavior: smooth;
+<<<<<<< HEAD
 	scroll-padding-top: 6rem; /* add spacing between each section */
+=======
+	scroll-padding-top: 5rem; /* add top padding with scroll */
+  overflow-x: hidden;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+>>>>>>> main
 }
 
 body {
@@ -40,6 +48,10 @@ body {
     font-family: "DM Sans", sans-serif;
     font-size: var(--mobile-paragraph);
     margin-top: 5rem; /* shift body down for navigation */
+    margin-left: 0;
+    margin-right: 0;
+    overflow-x: hidden;
+    width: 100%
 }
 
 @media (min-width: 68em){
@@ -75,6 +87,23 @@ main > section {
   height: 3rem;
   width: 100vw;
   z-index: 100;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 3rem;
+}
+
+.logo-favicon {
+  width: 3rem;
+}
+
+.logo-title a {
+  color: var(--light-text);
+  text-decoration: none;
+  font-weight: 700;
 }
 
 .logo-hamburger {
@@ -161,9 +190,18 @@ main > section {
   }
 
   .logo {
-    text-align: center;
-    padding: 2rem 0;
     border-bottom: 2px solid #eee;
+    padding-right: 1.5rem;
+    height: 8rem;
+  }
+
+  .logo-favicon {
+    width: 5rem;
+  }
+
+  .logo-title {
+    font-size: 1.25rem;
+    padding-bottom: 0.25rem;
   }
 
   .hamburger {
@@ -186,10 +224,11 @@ main > section {
   }
 
   .menu a:hover{
-    background-color: #F8F0FF;
-    color: #6B21A8;
+    background-color: var(--secondary-accent);
+    color: var(--primary-accent);
     border-radius: 1rem;
-    border: 1px solid #EBE8FF;
+    border: 1px solid var(--border);
+    transition: .3s;
   }
 
   .menu li {
@@ -199,40 +238,39 @@ main > section {
 }
 
 /*HOMEPAGE*/
+/*HOMEPAGE*/
 /* Welcome Section */
 
 #welcome-section {
   min-height: 100vh;
-  display:flex;
+  display: flex;
   align-items: center;
-  justify-content:center;
+  justify-content: center;
+  width: 100%;
+  overflow: hidden;
 }
+
+
 
 .welcome-content {
   background-color: var(--light-secondary);
   width: 100%;
-  max-width: 1920px;
-  padding-bottom: 5rem;
+  margin: 0 auto;
+  padding:1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .logo-title-container {
- position:relative;
-   min-height: 12rem;
-   margin: 0 auto;
-   width:max-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem; /* Adds space between logo and title */
+  margin: 0 auto;
+  text-align: left;
 }
 
-.logo-wrapper{
-  position:relative;
-  top:4rem;
-  right: 5rem;
-}
-
-.title-wrapper{
-  position:absolute;
-  top:5rem;
- left:3rem;
-}
 
 .homepage-logo {
   margin: 0;
@@ -240,22 +278,23 @@ main > section {
   width:8rem;
   filter: drop-shadow(0 0 20px var(--primary-accent));
 
-       
+}
 
+.title-wrapper{
+  width: 50%;
 }
 
 .welcome-content h1 {
   font-size: var(--mobile-h1);
-   margin: 0; 
-   padding: 0;
+  margin: 0; 
+  padding: 0;
 }
 
 .group-name {
-   margin-top: 1rem;
-   text-align: center;
-   padding: 0rem 1rem;
-   font-size: var(--mobile-paragraph);
-   font-weight: 100;
+  text-align: center;
+  padding: 0rem 1rem;
+  font-size: var(--mobile-paragraph);
+  font-weight: 100;
 }
 
 .names-container {
@@ -276,30 +315,17 @@ main > section {
 @media (min-width: 68em) {
 
   .welcome-content{
-    position: relative;
-     min-height: 80vh;
+    min-height: 80vh;
   }
     
   .logo-title-container {
-       margin-left: 28rem;
+    margin: 0 auto;
   }
 
-  .title-wrapper{
-    position:static;
-    margin-left: 15rem;
-    margin-top: 15rem
-  }
   .welcome-content h1{
-     font-size: var(--desktop-h1);
-     max-width: 20ch;
-     line-height: 1.1;
-    
-  }
-
-  .logo-wrapper{
-    position:absolute;
-    top: -2rem;
-    left: 2rem;
+    font-size: var(--desktop-h1);
+    max-width: 20ch;
+    line-height: 1.1;
   }
 
   .homepage-logo {
@@ -308,17 +334,13 @@ main > section {
   }
 
   .group-name{
-    position:relative;
-    top: -2rem;
     font-size: var(--desktop-paragraph)
-    
   }
 
   .name{
     padding: 1rem 4rem;
   }
 }
-
 
 
 /* FAITH'S SECTION */
@@ -459,6 +481,7 @@ main > section {
 
 
 
+<<<<<<< HEAD
 
 /* CLOUE'S SECTION */
 
@@ -466,59 +489,63 @@ main > section {
 
 
 /* ANNA'S SECTION */
+=======
+/* PROS VS CONS SECTION */
+>>>>>>> main
 .pros,
 .cons {
-  margin: 2rem;
-  padding: 1rem 2rem 1rem 0rem;
-}
-
-.pros li,
-.cons li {
-  padding-bottom: 1rem;
-  display: block;
+  margin: 0 auto;
+  padding: 0 1rem;
+  max-width: 25rem;
 }
 
 .pros h1,
 .cons h1 {
   text-align: center;
+  font-size: var(--mobile-h1);
 }
 
-.pros {
-  --changeMe: #eeeeee;
+.pros-box,
+.pros-box-change,
+.cons-box {
+  background-color: var(--light-secondary);
+  padding: 1rem;
+  border-radius: 1.5rem;
+}
+
+.pros-box,
+.pros-box-change {
+  box-shadow: -10px 0px var(--primary-accent);
+}
+
+.pros-box code {
+  background-color: var(--secondary-accent);
+}
+
+.pros-box-change {
+  --changeMe: #ffffff; /* do not change this */
   background-color: var(--changeMe);
   color: #1f1f1f;
 }
 
-.pros h1 {
-  color: #1f1f1f;
-}
-
-.cons,
-.cons h1 {
-  background-color: #6b21a8;
-  color: #f8f0ff;
-}
-
 .change-me {
+  padding-top: 1rem;
   text-align: center;
   font-size: 1.5rem;
   font-weight: 700;
 }
 
+.cons-box {
+  box-shadow: 10px 0px var(--primary-accent);
+}
 
-/* CREDIT SECTION */
-
-
-
-
-/* MEDIA QUERY */
 @media (min-width: 68em) {
   
-  /* ANNA'S SECTION */
   .pros-cons {
     display: flex;
     justify-content: center;
     gap: 2rem;
+    padding: 0 1rem;
   }
 
   .pros,
