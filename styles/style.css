@@ -31,15 +31,11 @@
 
 html {
   scroll-behavior: smooth;
-<<<<<<< HEAD
-	scroll-padding-top: 6rem; /* add spacing between each section */
-=======
 	scroll-padding-top: 5rem; /* add top padding with scroll */
   overflow-x: hidden;
   width: 100%;
   margin: 0;
   padding: 0;
->>>>>>> main
 }
 
 body {
@@ -481,17 +477,7 @@ main > section {
 
 
 
-<<<<<<< HEAD
-
-/* CLOUE'S SECTION */
-
-
-
-
-/* ANNA'S SECTION */
-=======
 /* PROS VS CONS SECTION */
->>>>>>> main
 .pros,
 .cons {
   margin: 0 auto;
