@@ -31,7 +31,7 @@
 
 html {
   scroll-behavior: smooth;
-	scroll-padding-top: 5rem; /* add spacing between each section */
+	scroll-padding-top: 2rem; /* add top padding with scroll */
 }
 
 body {
@@ -75,6 +75,23 @@ main > section {
   height: 3rem;
   width: 100vw;
   z-index: 100;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 3rem;
+}
+
+.logo-favicon {
+  width: 3rem;
+}
+
+.logo-title a {
+  color: var(--light-text);
+  text-decoration: none;
+  font-weight: 700;
 }
 
 .logo-hamburger {
@@ -161,9 +178,18 @@ main > section {
   }
 
   .logo {
-    text-align: center;
-    padding: 2rem 0;
     border-bottom: 2px solid #eee;
+    padding-right: 1.5rem;
+    height: 8rem;
+  }
+
+  .logo-favicon {
+    width: 5rem;
+  }
+
+  .logo-title {
+    font-size: 1.25rem;
+    padding-bottom: 0.25rem;
   }
 
   .hamburger {
@@ -186,10 +212,11 @@ main > section {
   }
 
   .menu a:hover{
-    background-color: #F8F0FF;
-    color: #6B21A8;
+    background-color: var(--secondary-accent);
+    color: var(--primary-accent);
     border-radius: 1rem;
-    border: 1px solid #EBE8FF;
+    border: 1px solid var(--border);
+    transition: .3s;
   }
 
   .menu li {
