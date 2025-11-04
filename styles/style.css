@@ -412,6 +412,7 @@ main > section {
   font-size: var( --desktop-h1);
   width: 100%;
   text-align: center;
+  line-height: 1.6;
   margin-bottom: calc(var(--spacing) * 4);
 
 }
@@ -464,61 +465,72 @@ main > section {
 
 }
 
-
-
-
-/* --- KRISHIV'S SECTION --- */
-/* --- KRISHIV'S SECTION --- */
-#krishiv {
-  padding: 60px 20px;
-  background-color: var(--primary); /* light background (white) */
-  color: var(--secondary);          /* light mode text (black) */
-  text-align: left;
-  transition: background-color 0.3s, color 0.3s;
+.card {
+  background-color: var(--primary);
+  border: solid 0.25rem #EBE8FF;
+  border-radius: calc(var(--spacing) * 1);
+  padding: calc(var(--spacing) * 3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-#krishiv h1 {
-  font-size: 2rem;
-  color: var(--accent); /* red heading in light mode */
-  margin-bottom: 20px;
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
 
-#krishiv h2 {
-  font-size: 1.5rem;
-  color: #555; /* dark grey subtitle in light mode */
-  margin-top: 20px;
-  margin-bottom: 10px;
+.card .icon {
+  font-size: calc(var(--spacing) * 5);
+  margin-bottom: calc(var(--spacing) * 2);
 }
 
-#krishiv p, #krishiv li {
-  max-width: 700px;
-  line-height: 1.6;
-  margin-bottom: 15px;
+.card h3 {
+  margin: 0.5rem 0;
+  color: var(--accent);
 }
 
-#krishiv ul {
-  list-style-type: disc;
-  padding-left: 20px;
+.card p {
+  font-size: calc(var(--spacing) * 2);
+  line-height: 1.5;
 }
 
-/* Dark mode */
-#krishiv.dark-mode {
-  background-color: #6a0dad; /* purple background */
-  color: #f0f0f0;            /* light text */
+/* ---------------- PRACTICAL SUMMARY POLAROID ---------------- */
+.practical-summary-card {
+  background-color: var(--primary);
+  border: solid 0.25rem #EBE8FF;
+  border-radius: calc(var(--spacing) * 1);
+  padding: calc(var(--spacing) * 3);
+  text-align: center;
+  font-size: calc(var(--spacing) * 2);
+  font-weight: bold;
+  margin: calc(var(--spacing) * 4) auto 0 auto;
+  max-width: 600px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-#krishiv.dark-mode h1 {
-  color: #ffffff;             /* white heading */
+.practical-summary-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
 
-#krishiv.dark-mode h2 {
-  color: #cccccc;             /* charcoal for subtitle */
+/* ---------------- RESPONSIVE ---------------- */
+@media (min-width: 68em) {
+  .reason-cards {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .card {
+    flex: 1 1 calc(25% - calc(var(--spacing) * 3));
+    max-width: 250px;
+  }
 }
 
-#krishiv.dark-mode p,
-#krishiv.dark-mode li {
-  color: #e0e0e0;             /* light grey text */
-}
 
 
 
@@ -646,5 +658,78 @@ html[data-theme="dark"] .site-footer {
   .nav-footer iconify-icon {
     vertical-align: middle;
     font-size: 1.2rem;
+  }
+} 
+/* ---------------- CREDITS SECTION ---------------- */
+#credits h1 {
+  font-size: var(--desktop-h2);
+  color: var(--primary-accent);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.credits-rectangle,
+#credits .big-rectangle {
+  background-color: var(--secondary-accent);
+  padding: 2rem;
+  border-radius: 1rem;
+  margin: 2rem auto;
+  max-width: 1000px;
+}
+
+#credits .reason-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+#credits .card {
+  background-color: var(--light-background);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  flex: 1 1 250px;
+  max-width: 300px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#credits .card h3 {
+  font-size: var(--desktop-h3);
+  color: var(--primary-accent);
+}
+
+#credits .card p {
+  font-size: var(--desktop-paragraph);
+  color: var(--charcoal);
+  flex-grow: 1;
+}
+
+#credits .card a {
+  text-decoration: none;
+  color: var(--primary-accent);
+  font-weight: bold;
+  align-self: flex-start;
+  transition: color 0.3s ease;
+}
+
+#credits .card a:hover {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+#credits .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+/* Responsive */
+@media (max-width: 68em) {
+  #credits .reason-cards {
+    flex-direction: column;
+    align-items: center;
   }
 }
