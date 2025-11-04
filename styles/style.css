@@ -533,67 +533,61 @@ main > section {
 
 
 
-
-
-/* CLOUE'S SECTION */
-
-
-
-
-/* ANNA'S SECTION */
+/* PROS VS CONS SECTION */
 .pros,
 .cons {
-  margin: 2rem;
-  padding: 1rem 2rem 1rem 0rem;
-}
-
-.pros li,
-.cons li {
-  padding-bottom: 1rem;
-  display: block;
+  margin: 0 auto;
+  padding: 0 1rem;
+  max-width: 25rem;
 }
 
 .pros h1,
 .cons h1 {
   text-align: center;
+  font-size: var(--mobile-h1);
 }
 
-.pros {
-  --changeMe: #eeeeee;
+.pros-box,
+.pros-box-change,
+.cons-box {
+  background-color: var(--light-secondary);
+  padding: 1rem;
+  border-radius: 1.5rem;
+}
+
+.pros-box,
+.pros-box-change {
+  box-shadow: -10px 0px var(--primary-accent);
+}
+
+.pros-box code {
+  background-color: var(--secondary-accent);
+}
+
+.pros-box-change {
+  --changeMe: #ffffff; /* do not change this */
   background-color: var(--changeMe);
   color: #1f1f1f;
 }
 
-.pros h1 {
-  color: #1f1f1f;
-}
-
-.cons,
-.cons h1 {
-  background-color: #6b21a8;
-  color: #f8f0ff;
-}
-
 .change-me {
+  padding-top: 1rem;
   text-align: center;
   font-size: 1.5rem;
   font-weight: 700;
 }
 
+.cons-box {
+  box-shadow: 10px 0px var(--primary-accent);
+}
 
-/* CREDIT SECTION */
-
-
-
-
-/* MEDIA QUERY */
 @media (min-width: 68em) {
   
-  /* ANNA'S SECTION */
   .pros-cons {
     display: flex;
     justify-content: center;
     gap: 2rem;
+    padding: 0 1rem;
   }
 
   .pros,
