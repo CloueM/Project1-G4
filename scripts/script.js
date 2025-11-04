@@ -9,7 +9,7 @@ button.addEventListener('click', function(){
 
 // pick a color in pros vs cons section
 let color = document.getElementById('color');
-const bg = document.querySelector('.pros');
+const bg = document.querySelector('.pros-box-change');
 
 color.addEventListener('change', function(newColor){
     bg.style.setProperty('--changeMe', newColor.target.value);
