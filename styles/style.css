@@ -31,15 +31,11 @@
 
 html {
   scroll-behavior: smooth;
-<<<<<<< HEAD
-	scroll-padding-top: 6rem; /* add spacing between each section */
-=======
 	scroll-padding-top: 5rem; /* add top padding with scroll */
   overflow-x: hidden;
   width: 100%;
   margin: 0;
   padding: 0;
->>>>>>> main
 }
 
 body {
@@ -438,13 +434,14 @@ main > section {
   border-radius: 1rem;
   padding: 2rem;
   box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  transition: transform 0.4s ease, box-shadow 0.4s ease, background-color 0.3s ease;
   cursor: pointer;
 }
 
 .reason-card:hover {
   transform: translateY(-10px) scale(1.03);
   box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  background-color: var(--secondary-accent); /* highlight on hover */
 }
 
 .reason-card .icon {
@@ -463,6 +460,16 @@ main > section {
   font-size: var(--mobile-paragraph);
 }
 
+/* Responsive font sizes */
+@media (max-width: 48em) {
+  #practical-reasons h1, #features h1 {
+    font-size: var(--mobile-h1);
+  }
+  .reason-card p {
+    font-size: var(--mobile-paragraph);
+  }
+}
+
 @media (prefers-color-scheme: dark) {
   #practical-reasons, #features {
     background-color: var(--dark-background);
@@ -476,22 +483,20 @@ main > section {
 
   .reason-card:hover {
     box-shadow: 0 10px 25px rgba(255,255,255,0.1);
+    background-color: var(--primary-accent); /* darker hover highlight for dark mode */
+    color: var(--dark-text);
+  }
+
+  .reason-card .icon,
+  .reason-card h3 {
+    color: var(--light-text);
   }
 }
 
 
 
-<<<<<<< HEAD
 
-/* CLOUE'S SECTION */
-
-
-
-
-/* ANNA'S SECTION */
-=======
 /* PROS VS CONS SECTION */
->>>>>>> main
 .pros,
 .cons {
   margin: 0 auto;
