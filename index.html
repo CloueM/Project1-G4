@@ -3,152 +3,166 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="CSS Custom Properties" />
+    <link rel="manifest" href="/site.webmanifest" />
     <title>CSS Custom Properties</title>
     <link rel="stylesheet" href="styles/normalize-fwd.css">
     <link rel="stylesheet" href="styles/style.css">
+    <script src="scripts/script.js" defer></script>
+    <script src="https://code.iconify.design/iconify-icon/3.0.0/iconify-icon.min.js"></script>
 </head>
 <body>
-    
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="introduction">Faith's section</a></li>
-                <li><a href="#krishiv">Krishiv's section</a></li>
-                <li><a href="#cloue">Cloue's section</a></li>
-                <li><a href="#pros-cons">Pros vs. Cons</a></li>
-                <li><a href="#credit">Credit</a></li>
+    <!--TODO: change src to iconify links-->
+    <header class="navigation">
+        <section class="logo-hamburger">
+            <div class="logo">
+                <a href=""><img src="https://placehold.co/48x48" alt="CSS Custom Properties logo"></a>
+            </div>
+
+            <div class="hamburger" id="hamburger">
+                 <span class="bar1"></span>
+                 <span class="bar2"></span>
+                 <span class="bar3"></span>
+            </div>
+        </section>
+
+        <nav class="menu">
+            <ul id="menu-list">
+                <li><a href="index.html">
+                    <iconify-icon icon="mynaui:home"></iconify-icon>Welcome</a></li>
+                <li><a href="#intro">
+                    <iconify-icon icon="iconoir:page"></iconify-icon>Introduction</a></li>
+                <li><a href="#importance">
+                    <iconify-icon icon="proicons:sparkle-2"></iconify-icon>Why They Matter</a></li>
+                <li><a href="#krishiv">
+                    <iconify-icon icon="iconoir:suitcase"></iconify-icon>Practical Reasons</a></li> 
+                <li><a href="#krishiv">
+                    <iconify-icon icon="ri:stack-line"></iconify-icon>Features</a></li> 
+                <li><a href="#pros-cons">
+                    <iconify-icon icon="material-symbols:balance"></iconify-icon>Pros/Cons</a></li>
+                <li><a href="#demo">
+                    <iconify-icon icon="material-symbols:computer-outline"></iconify-icon>Demo</a></li>
+                <li><a href="#credits">
+                    <iconify-icon icon="ic:baseline-copyright"></iconify-icon>Credits</a></li>
             </ul>
         </nav>
+        <div class="nav-footer"> <!--Desktop only footer-->
+            <p><iconify-icon icon="ic:baseline-copyright"></iconify-icon> 2025 CSS Props Group 4</p>
+        </div>
     </header>
 
     <main>
+        <!--WELCOME SECTION-->
+        <section id="welcome-section">
+        <div class="welcome-page-background"></div>
 
-        <!-- START OF FAITH'S SECTION -->
-        <section class="intro" id="intro">
-            
-            <h1>An Introduction to CSS Custom Properties</h1>
+    <div class="welcome-content">
 
-            <article class="introduction">
-            <div class="intro-polaroid">
+        <h1>CSS Custom Properties</h1>
+        <img src="welcome-page-logo.svg" alt="logo for welcome page" class="homepage-logo">
+        <p class="group-name">FWDP 2000 Web Development 2 Project 1 Group 4</p>
+        
+      <div class="names-container">
+        <div class="name">Krishiv</div>
+        <div class="name">Anna</div>
+        <div class="name">Faith</div>
+        <div class="name">Cloue</div>
+      </div>
 
-                   <pre class="code-block"><code>:root { <br>something will <br> go here later }</code></pre>
-
-            <h2 class="intro-sub">What are CSS Custom properties (also called CSS Variables)?</h2>
-            
-            <p class="intro-info">They are values that can be reused throughout your styles and defined once. When declaring your custom property, they always start with two dashes and are assigned a value (e.g. --main-color). This will also need to be used with the var() function. To store your values, it is common practice to define the variables on :root for easy management of colours, fonts, and spacing across your whole website.</p>
-            </div>
-        </article>
-
-
+        
+        
+    </div>
         </section>
 
+        <!-- INTRODUCTION SECTION -->
+        <section class="intro" id="intro">
+            <h1>An Introduction to CSS Custom Properties</h1>
+            <article class="introduction">
+                <div class="intro-polaroid">
+                    <pre class="code-block"><code>:root { 
+                        <br> --main-color
+               }</code></pre>
+                    <h2 class="intro-sub">What are CSS Custom properties (also called CSS Variables)?</h2>
+                    <p class="intro-info">They are values that can be reused throughout your styles and defined once. When declaring your custom property, they always start with two dashes and are assigned a value (e.g. --main-color). This will also need to be used with the var() function. To store your values, it is common practice to define the variables on :root for easy management of colours, fonts, and spacing across your whole website.</p>
+                </div>
+            </article>
+        </section>
 
-        <!--- WHY DOES IT MATTER?-->
-               
-
-
+        <!--- WHY DOES IT MATTER SECTION-->
         <section class="importance" id="importance">
-
             <h1> Why Do They Matter?</h1>
-
-                <article class="why-it-matters">
+            <article class="why-it-matters">
                 <div class="importance-box">
-
                     <h2 class="reason">Modernized CSS</h2>
                     <p class="reason-explanation">Instead of relying on preprocessors like Sass, Custom Properties are built into CSS itself - faster, simpler and more powerful.</p>
-
                 </div>
-                </article> 
+            </article> 
 
-
-                <article class="why-it-matters">
+            <article class="why-it-matters">
                 <div class="importance-box">
-
                     <h2 class="reason">More simplicity with the way we write css</h2>
                     <p class="reason-explanation">With Custom properties, developers have the freedom to create their own reusable values - CSS couldn't do something like this before.</p>
-
                 </div>
-                </article>
+            </article>
 
-
-                <article class="why-it-matters">
+            <article class="why-it-matters">
                 <div class="importance-box">
-
                     <h2 class="reason">Solves a Universal Problem</h2>
                     <p class="reason-explanation">When custom properties weren't around, stylesheets were filled with random and repeated values. With Custom Properties, it makes every developer's life easier.</p>
-
                 </div>
-                </article>
+            </article>
 
-
-                <article class="why-it-matters">
+            <article class="why-it-matters">
                 <div class="importance-box">
-
                     <h2 class="reason">More Scalable</h2>
                     <p class="reason-explanation">Building big websites becomes easier to update and organized with the simplified and consistent rules that custom properties bring.</p>
-
                 </div>
-                </article>
+            </article>
 
-
-                <article class="why-it-matters">
+            <article class="why-it-matters">
                 <div class="importance-box">
-
                     <h2 class="reason">They help developers work together</h2>
                     <p class="reason-explanation">This matters because, as developers build big websites or projects,  they can share the same properties/variables for colours, fonts and spacing. This promotes consistency in everyone's design while still allowing room for individual creativity.</p>
-
                 </div>
-                </article>
+            </article>
 
-
-                <article class="why-it-matters">
+            <article class="why-it-matters">
                 <div class="importance-box">
-
                     <h2 class="reason">Less errors and mistakes</h2>
                     <p class="reason-explanation">Instead of retyping the values, reusing them helps prevent errors and broken designs.</p>
-
                 </div>
-                </article>
+            </article>
+        </section>
 
-                </section>
+        <!-- TODO: Rename Sections ID-->
+        <!-- WHY WE USE CSS CUSTOM PROPERTIES SECTION -->
+        <section id="krishiv" class="dark-mode">
+            <h1>Why We Use CSS Custom Properties</h1>
+            <p>
+                <strong>CSS custom properties</strong>, also known as <strong>CSS variables</strong>, allow developers to store <span>reusable values</span> — like colors, font sizes, spacing, or layout dimensions — in one place. 
+                This helps make styling consistent across a website and makes updates easier, because changing the variable automatically updates all elements that use it.
+            </p>
+            <h2>Practical Uses of CSS Custom Properties</h2>
+            <ul>
+                <li><strong>Dark Mode:</strong> Easily switch themes by changing the variable values, instead of editing each element individually.</li>
+                <li><strong>Colors:</strong> Store main brand colors in variables for consistent design throughout the website.</li>
+                <li><strong>Fonts & Spacing:</strong> Quickly adjust typography and layout across the site by updating a few variables.</li>
+                <li><strong>Responsive Design:</strong> Use variables for breakpoints and flexible sizing, making it easier to adapt for mobile or desktop screens.</li>
+            </ul>
+            <p>Using CSS custom properties improves maintainability, reduces errors, and makes websites more scalable and adaptable for future updates.</p>
+        </section>
 
-
-
-
-        <!-- START OF KRISHIV'S SECTION -->
-        
-<section id="krishiv" class="dark-mode">
-  <h1>Why We Use CSS Custom Properties</h1>
-  <p>
-    <strong>CSS custom properties</strong>, also known as <strong>CSS variables</strong>, allow developers to store <span>reusable values</span> — like colors, font sizes, spacing, or layout dimensions — in one place. 
-    This helps make styling consistent across a website and makes updates easier, because changing the variable automatically updates all elements that use it.
-  </p>
-
-  <h2>Practical Uses of CSS Custom Properties</h2>
-  <ul>
-    <li><strong>Dark Mode:</strong> Easily switch themes by changing the variable values, instead of editing each element individually.</li>
-    <li><strong>Colors:</strong> Store main brand colors in variables for consistent design throughout the website.</li>
-    <li><strong>Fonts & Spacing:</strong> Quickly adjust typography and layout across the site by updating a few variables.</li>
-    <li><strong>Responsive Design:</strong> Use variables for breakpoints and flexible sizing, making it easier to adapt for mobile or desktop screens.</li>
-  </ul>
-
-  <p>
-    Using CSS custom properties improves maintainability, reduces errors, and makes websites more scalable and adaptable for future updates.
-  </p>
-</section>
-
-
-
-
-        <!-- START OF CLOUE'S SECTION -->
-        <section id="cloue">
+        <!-- DEMO SECTION -->
+        <section id="demo-section">
             <h1>title</h1>
             <p>details</p>
         </section>
 
-
-        <!-- START OF ANNA'S SECTION -->
+        <!-- PROS-CONS-SECTION -->
         <section class="pros-cons" id="pros-cons">
             <article class="pros">
                 <h1>Pros</h1>
@@ -159,19 +173,9 @@
                     <li><strong>Fallback values.</strong> Similar to how fonts can have a fallback, developers can also set fallback values for their variables.</li>
                     <li><strong>Can be manipulated with Javascript.</strong> Developers can target custom variables in their Javascript. This container is coded with a custom variable. Try changing the colour of this container below!</li>
                 </ul>
-
                 <div class="change-me">
                     <span>Pick a color:</span>
                     <input id="color" type="color" value="#eeeeee">
-
-                    <script>
-                        let color = document.getElementById('color');
-                        const bg = document.querySelector('.pros');
-
-                        color.addEventListener('change', function(newColor){
-                            bg.style.setProperty('--changeMe', newColor.target.value);
-                        });
-                    </script>
                 </div>
             </article>
 
@@ -184,22 +188,42 @@
                     <li><strong>Browser compatibility.</strong> Internet Explorer currently does not support custom variables.</li>
                 </ul>
             </article>
-
         </section>
 
+        <!-- ---------------- CREDITS SECTION ---------------- -->
+<section id="credits" class="dark-mode">
+  <h1>Credits & References</h1>
+  
+  <!-- Big rectangle for credit cards -->
+  <div class="big-rectangle">
 
-        <!-- CREDITS SECTION -->
-        <section id="credit">
-            <p>credit links here</p>
-        </section>
+    <div class="reason-cards">
+      <div class="card">
+        <h3>Should I Use CSS Variables</h3>
+        <p>Medium article exploring the benefits and implementation of CSS variables.</p>
+        <a href="https://medium.com/@aicontentpace/should-i-use-css-variables-2f87f1360f6a" target="_blank">Read More</a>
+      </div>
+
+      <div class="card">
+        <h3>A Complete Guide to Custom Properties</h3>
+        <p>CSS-Tricks guide covering all you need to know about CSS custom properties.</p>
+        <a href="https://css-tricks.com/a-complete-guide-to-custom-properties/" target="_blank">Read More</a>
+      </div>
+
+      <div class="card">
+        <h3>CSS Variables Gone Wrong: Pitfalls to Watch Out For</h3>
+        <p>PixelFreeStudio Blog by Abir Das on common pitfalls when using CSS variables.</p>
+        <a href="https://blog.pixelfreestudio.com/css-variables-gone-wrong-pitfalls-to-watch-out-for/" target="_blank">Read More</a>
+      </div>
+    </div>
+
+  </div> <!-- end big rectangle -->
+</section>
 
     </main>
 
-    <footer>
-        &copy; 2025. For educational use only.
+    <footer class="site-footer">
+        <p><iconify-icon icon="ic:baseline-copyright"></iconify-icon> 2025 CSS Props Group 4</p>
     </footer>
-
-
-
 </body>
 </html>
