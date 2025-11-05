@@ -375,8 +375,48 @@ p{ font-size: var(--mobile-paragraph);}
 
 
 /*-------------Introduction-------------*/
+  .intro h1 {
+  background-color: var(--light-secondary);
+  padding:2rem 1rem;
+  margin:0;
+  }
 
+  .intro{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  }
+  .code-block{
+    background-color: var(--secondary-accent);
+    padding: calc(var(--spacing-xs) * 12) calc(var(--spacing-xs) * 2);
+    border-radius: 1rem;
+  }
 
+  .introduction{
+    margin:0 1rem;
+  }
+
+@media (min-width: 68em) {
+  .intro h1 {
+    padding:4rem 5rem;
+    margin:2rem 0;
+  }
+
+  .introduction{
+    display: flex;
+    margin:1rem;
+  }
+
+  .code-block{
+    margin-right:2rem;
+  }
+  .intro-definitions{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+}
 /* ----------------Why-they-matter--------------- */
 
 .importance h1 {
