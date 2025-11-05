@@ -1,4 +1,9 @@
 :root {
+
+  /*Spacing*/
+  --spacing: 0.5rem;
+  
+  /*Colours*/
   --primary-accent: #6B21A8;
   --secondary-accent: #F8F0FF;
   --border: #EBE8FF;
@@ -27,6 +32,13 @@
   --desktop-h3: 1.5rem; /* 24px */
   --desktop-paragraph: 1.25rem; /* 20px */
   --desktop-captions: 1rem; /* 16px */
+
+  --card-width: calc(var(--spacing) *32);
+  --card-height:calc(var(--spacing) *42);
+  --border-width: 1px;
+  --polaroid-bg: var(--light-secondary);
+
+  
 }
 
 html {
@@ -234,7 +246,6 @@ main > section {
 }
 
 /*HOMEPAGE*/
-/*HOMEPAGE*/
 /* Welcome Section */
 
 #welcome-section {
@@ -341,30 +352,12 @@ main > section {
 
 /* FAITH'S SECTION */
 
-/* Scoped overrides for Faith’s section */
-.intro,
-.importance {
-  --spacing: 0.5rem;  
-  --primary: var(--light-background);
-  --secondary: var(--light-text);
-  --accent: var(--primary-accent);
-  --border-color: var(--border);
-
-  --card-bg: #EBE8FF;
-  --highlight-bg: #f0e6ff;
-
-  --card-width: calc(var(--spacing) *32);
-  --card-height:calc(var(--spacing) *42);
-  --border-width: 1px;
-  --polaroid-bg: var(--light-secondary);  
-
-}
 
   .intro h1,
   .importance h1{
     text-align: center;
-    color: var(--secondary);
-    font-size: var( --mobile-h1);
+    color: var(--light-text);
+    font-size: var(--mobile-h1);
     margin-top: calc(var(--spacing) * 5);     
   margin-bottom: calc(var(--spacing) * 3);
     
@@ -373,7 +366,7 @@ main > section {
 
   .intro-polaroid {
     background-color: var(--polaroid-bg);
-    border: solid 0.5rem var(--border-color);
+    border: solid 0.8rem var(--secondary-accent);
     border-radius: calc(var(--spacing) * 1); 
     padding: calc(var(--spacing) * 3);
     margin: auto;
@@ -387,12 +380,12 @@ main > section {
     .intro-info {
     margin: 0;
     font-size: calc(var(--spacing) * 2);
-    color: var(--secondary);
+    color: var(--light-text);
     text-align:left;
     
   }
     .code-block{
-    background-color: var(--highlight-bg);
+    background-color: var(--secondary-accent);
      padding: calc(var(--spacing) * 12) calc(var(--spacing) * 2);
   }
 
