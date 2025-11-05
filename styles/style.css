@@ -191,6 +191,17 @@ p{ font-size: var(--mobile-paragraph);}
   vertical-align: bottom;
 }
 
+/* Active navigation state for mobile */
+.menu li.active {
+  background-color: var(--secondary-accent);
+  border-radius: 1rem;
+  border: 1px solid var(--border);
+}
+
+.menu li.active a {
+  color: var(--primary-accent);
+}
+
 @media (min-width: 68em) {
   .navigation {
     width: 20rem;
@@ -244,12 +255,17 @@ p{ font-size: var(--mobile-paragraph);}
     padding:0;
   }
 
-  .menu li:hover{
+  .menu li:hover,
+  .menu li.active {
     background-color: var(--secondary-accent);
     color: var(--primary-accent);
     border-radius: 1rem;
     border: 1px solid var(--border);
     transition: .3s;
+  }
+
+  .menu li.active a {
+    color: var(--primary-accent);
   }
 }
 
