@@ -1,8 +1,5 @@
 :root {
 
-  /*Spacing*/
-  --spacing: 0.5rem;
-  
   /*Colours*/
   --primary-accent: #6B21A8;
   --secondary-accent: #F8F0FF;
@@ -33,21 +30,15 @@
   --desktop-paragraph: 1.25rem; /* 20px */
   --desktop-captions: 1rem; /* 16px */
 
-  --card-width: calc(var(--spacing) *32);
-  --card-height:calc(var(--spacing) *42);
-  --border-width: 1px;
-  --polaroid-bg: var(--light-secondary);
-
-  
+  /*Spacing*/
+  --spacing-xs: 0.5rem;
+  --spacing-s:1rem;
+  --spacing-m:1.5rem
 }
 
+/*---------------------Global stlyes---------------------*/
 html {
   scroll-behavior: smooth;
-	scroll-padding-top: 5rem; /* add top padding with scroll */
-  overflow-x: hidden;
-  width: 100%;
-  margin: 0;
-  padding: 0;
 }
 
 body {
@@ -55,37 +46,41 @@ body {
     color: var(--light-text);
     font-family: "DM Sans", sans-serif;
     font-size: var(--mobile-paragraph);
-    margin-top: 5rem; /* shift body down for navigation */
-    margin-left: 0;
-    margin-right: 0;
-    overflow-x: hidden;
-    width: 100%
-}
-
-@media (min-width: 68em){
-  main {
-    margin-left: 320px;
-  }
-}
-
-h1, h2 {
-    color: var(--accent);
 }
 
 /* Making sure that each section max height is the screen size */
 main > section {
-  min-height: 100vh;
-
+  height: 100vh;
 }
+
+h1{ font-size: var(--mobile-h1);}
+h2{ font-size: var(--mobile-h2);}
+h3{ font-size: var(--mobile-h3);}
+p{ font-size: var(--mobile-paragraph);}
+
+@media (min-width: 68em){
+  /* Leave space on the left for the navigation side bar */
+  main {
+    margin-left: 320px;
+  }
+  
+  h1{ font-size: var(--desktop-h1);}
+  h2{ font-size: var(--desktop-h2);}
+  h3{ font-size: var(--desktop-h3);}
+
+  body {
+    font-size: var(--desktop-paragraph);
+    margin-top:0;
+  }
+}
+
 @media (min-width: 68em){
   body {
     margin-top:0;
   }
-
-  main > section {
-    min-height:100vh;
-  }
 }
+/*---------------------Global-stlyes-end---------------------*/
+
 /*---------------------------------------------------------------*/
 /* NAVIGATION BAR */
 .navigation {
@@ -249,12 +244,11 @@ main > section {
 /* Welcome Section */
 
 #welcome-section {
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
-  overflow: hidden;
 }
 
 
@@ -358,35 +352,35 @@ main > section {
     text-align: center;
     color: var(--light-text);
     font-size: var(--mobile-h1);
-    margin-top: calc(var(--spacing) * 5);     
-  margin-bottom: calc(var(--spacing) * 3);
+    margin-top: calc(var(--spacing-xs) * 5);     
+  margin-bottom: calc(var(--spacing-xs) * 3);
     
 
   }
 
   .intro-polaroid {
-    background-color: var(--polaroid-bg);
+    background-color: var(--light-secondary);
     border: solid 0.8rem var(--secondary-accent);
-    border-radius: calc(var(--spacing) * 1); 
-    padding: calc(var(--spacing) * 3);
+    border-radius: calc(var(--spacing-xs) * 1); 
+    padding: calc(var(--spacing-xs) * 3);
     margin: auto;
-    width: calc(var(--spacing) * 35); /* equivalent to 280px*/
+    width: calc(var(--spacing-xs) * 35); /* equivalent to 280px*/
     display:flex;
     flex-direction: column;
-    gap: calc(var(--spacing) * 4);
+    gap: calc(var(--spacing-xs) * 4);
   }
 
     .intro-sub,
     .intro-info {
     margin: 0;
-    font-size: calc(var(--spacing) * 2);
+    font-size: calc(var(--spacing-xs) * 2);
     color: var(--light-text);
     text-align:left;
     
   }
     .code-block{
     background-color: var(--secondary-accent);
-     padding: calc(var(--spacing) * 12) calc(var(--spacing) * 2);
+     padding: calc(var(--spacing-xs) * 12) calc(var(--spacing-xs) * 2);
   }
 
 /* ---------------- PRACTICAL REASONS & FEATURES STYLES ---------------- */
@@ -451,8 +445,6 @@ main > section {
   color: var(--charcoal);
   font-size: var(--mobile-paragraph);
 }
-
-
 
 /* PROS VS CONS SECTION */
 .pros,
