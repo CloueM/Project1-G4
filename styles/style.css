@@ -85,13 +85,10 @@ p{ font-size: var(--mobile-paragraph);}
 }
 /*---------------------Global-stlyes-end---------------------*/
 
-/*---------------------------------------------------------------*/
-/* NAVIGATION BAR */
+/*---------------------NAVIGATION-BAR---------------------*/
 .navigation {
-  background-color: #fff;
   position: fixed;
   top: 0;
-  height: 3rem;
   width: 100vw;
   z-index: 100;
 }
@@ -114,8 +111,10 @@ p{ font-size: var(--mobile-paragraph);}
 }
 
 .logo-hamburger {
+  background-color: var(--light-secondary);
   display: flex;
   justify-content: space-between;
+  padding:var(--spacing-xs);
 }
 
 .hamburger span {
