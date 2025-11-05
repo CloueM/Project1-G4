@@ -1,3 +1,33 @@
+/* ============================================================
+DARK MODE TOGGLE - JavaScript for Theme Switching
+============================================================
+KEY CONCEPT: JavaScript only needs to toggle ONE attribute.
+CSS Custom Properties do ALL the heavy lifting!
+   ============================================================ */
+
+// Dark Mode Toggle Functionality
+const themeToggle = document.getElementById('theme-toggle');
+
+// Check if user has a saved theme preference
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme) {
+    document.documentElement.setAttribute('data-theme', savedTheme);
+}
+
+// Toggle theme when button is clicked
+themeToggle.addEventListener('click', function() {
+    const currentTheme = document.documentElement.getAttribute('data-theme');
+    
+    // Switch between light and dark
+    if (currentTheme === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'light');
+        localStorage.setItem('theme', 'light');
+    } else {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', 'dark');
+    }
+});
+
 // mobile navigation slide out
 const button = document.getElementById('hamburger');
 const list = document.getElementById('menu-list');
@@ -15,7 +45,7 @@ color.addEventListener('change', function(newColor){
     bg.style.setProperty('--changeMe', newColor.target.value);
 });
 
-// Scroll spy for navigation highlighting
+// For navigation highlighting
 const sections = document.querySelectorAll('main > section');
 const navLinks = document.querySelectorAll('.menu a');
 
@@ -25,7 +55,7 @@ function setActiveLink() {
     sections.forEach(section => {
         const sectionTop = section.offsetTop;
         
-        // Check if section is in viewport (with some offset for better UX)
+        // Check if section is in viewport
         if (window.scrollY >= sectionTop - 200) {
             currentSection = section.getAttribute('id');
         }
