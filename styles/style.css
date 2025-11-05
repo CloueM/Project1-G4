@@ -376,38 +376,6 @@ p{ font-size: var(--mobile-paragraph);}
 
 /*-------------Introduction-------------*/
 
-  .intro h1{
-    text-align: center;
-    color: var(--light-text);
-    font-size: var(--mobile-h1);
-    margin-top: calc(var(--spacing-xs) * 5);     
-    margin-bottom: calc(var(--spacing-xs) * 3);
-  }
-
-  .intro-polaroid {
-    background-color: var(--light-secondary);
-    border: solid 0.8rem var(--secondary-accent);
-    border-radius: calc(var(--spacing-xs) * 1); 
-    padding: calc(var(--spacing-xs) * 3);
-    margin: auto;
-    width: calc(var(--spacing-xs) * 35); /* equivalent to 280px*/
-    display:flex;
-    flex-direction: column;
-    gap: calc(var(--spacing-xs) * 4);
-  }
-
-    .intro-sub,
-    .intro-info {
-    margin: 0;
-    font-size: calc(var(--spacing-xs) * 2);
-    color: var(--light-text);
-    text-align:left;
-    
-  }
-    .code-block{
-    background-color: var(--secondary-accent);
-    padding: calc(var(--spacing-xs) * 12) calc(var(--spacing-xs) * 2);
-  }
 
 /* ----------------Why-they-matter--------------- */
 
