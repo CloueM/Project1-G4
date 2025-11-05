@@ -452,22 +452,6 @@ main > section {
   font-size: var(--mobile-paragraph);
 }
 
-@media (prefers-color-scheme: dark) {
-  #practical-reasons, #features {
-    background-color: var(--dark-background);
-    color: var(--dark-text);
-  }
-
-  .reason-card {
-    background-color: var(--dark-secondary);
-    border-color: var(--charcoal);
-  }
-
-  .reason-card:hover {
-    box-shadow: 0 10px 25px rgba(255,255,255,0.1);
-  }
-}
-
 
 
 /* PROS VS CONS SECTION */
