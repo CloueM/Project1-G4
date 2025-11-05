@@ -90,7 +90,7 @@ p{ font-size: var(--mobile-paragraph);}
 .navigation {
   position: fixed;
   top: 0;
-  width: 100vw;
+  width: 100%;
   z-index: 100;
 }
 
@@ -444,24 +444,23 @@ p{ font-size: var(--mobile-paragraph);}
 
 .section-container::-webkit-scrollbar-track {
   background: var(--secondary-accent);
-  border-radius: 2px;
+  border-radius: 10px;
 }
 
 .section-container::-webkit-scrollbar-thumb {
-  background: var(--dark-background);
-  border-radius: 2px;
+  background: var(--primary-accent);
+  border-radius: 10px;
 }
 
-
 .section-container::-webkit-scrollbar-thumb:hover {
-  background: var(--accent);
-  border-radius: 2px;
+  background: var(--dark-background);
+  border-radius: 10px;
 }
 
 /* For Firefox */
 .section-container {
   scrollbar-width: thin;
-  scrollbar-color: var(--primary-accent) var(--light-secondary);
+  scrollbar-color: var(--primary-accent) var(--secondary-accent);
 }
 
 @media (min-width: 68em) {
