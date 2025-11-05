@@ -33,6 +33,15 @@
 
     <nav class="menu">
       <ul id="menu-list">
+        <!-- DARK MODE TOGGLE - Demonstrates CSS Custom Properties in Action! -->
+        <!-- This button uses JavaScript to switch between light/dark theme variables -->
+        <li class="theme-toggle-container">
+          <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+            <iconify-icon icon="ph:sun-bold" class="sun-icon"></iconify-icon>
+            <iconify-icon icon="ph:moon-bold" class="moon-icon"></iconify-icon>
+          </button>
+        </li>
+        
         <li><a href="#welcome-section">
           <iconify-icon icon="mynaui:home"></iconify-icon>Welcome</a></li>
         <li><a href="#intro">
@@ -84,12 +93,56 @@
       <article class="introduction">
         <div class="intro-polaroid">
           <pre class="code-block"><code>:root {
-            <br> --main-color
-          }</code></pre>
+            <br> --main-color <br>}</code></pre>
+        </div>
+        <div class="intro-definitions">
           <h2 class="intro-sub">What are CSS Custom properties (also called CSS Variables)?</h2>
           <p class="intro-info">They are values that can be reused throughout your styles and defined once. When declaring your custom property, they always start with two dashes and are assigned a value (e.g. --main-color). This will also need to be used with the var() function. To store your values, it is common practice to define the variables on :root for easy management of colours, fonts, and spacing across your whole website.</p>
         </div>
       </article>
+    </section>
+
+    <!--- WHY DOES IT MATTER?-->
+    <section class="importance" id="importance">
+      <h1> Why Do They Matter?</h1>
+      <div class="section-container">
+        <article class="why-it-matters">
+          <div class="importance-box">
+            <h3 class="reason">Modernized CSS</h3>
+            <p class="reason-explanation">Instead of relying on preprocessors like Sass, Custom Properties are built into CSS itself - faster, simpler and more powerful.</p>
+          </div>
+        </article> 
+        <article class="why-it-matters">
+          <div class="importance-box">
+            <h3 class="reason">More simplicity with the way we write css</h3>
+            <p class="reason-explanation">With Custom properties, developers have the freedom to create their own reusable values - CSS couldn't do something like this before.</p>
+          </div>
+        </article>
+        <article class="why-it-matters">
+          <div class="importance-box">
+            <h3 class="reason">Solves a Universal Problem</h3>
+            <p class="reason-explanation">When custom properties weren't around, stylesheets were filled with random and repeated values. With Custom Properties, it makes every developer's life easier.</p>
+          </div>
+        </article>
+        <article class="why-it-matters">
+          <div class="importance-box">
+            <h3 class="reason">More Scalable</h3>
+            <p class="reason-explanation">Building big websites becomes easier to update and organized with the simplified and consistent rules that custom properties bring.</p>
+          </div>
+        </article>
+        <article class="why-it-matters">
+          <div class="importance-box">
+              <h3 class="reason">They help developers work together</h3>
+              <p class="reason-explanation">This matters because, as developers build big websites or projects,  they can share the same properties/variables for colours, fonts and spacing. This promotes consistency in everyone's design while still allowing room for individual creativity.</p>
+          </div>
+        </article>
+        <article class="why-it-matters">
+          <div class="importance-box">
+            <h3 class="reason">Less errors and mistakes</h3>
+            <p class="reason-explanation">Instead of retyping the values, reusing them helps prevent errors and broken designs.</p>
+          </div>
+        </article>
+      </div>
     </section>
 
     <!--PRACTICAL-REASONS-SECTION-->
