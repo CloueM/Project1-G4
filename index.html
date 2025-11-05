@@ -1,235 +1,210 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>   
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="shortcut icon" href="/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <meta name="apple-mobile-web-app-title" content="CSS Custom Properties" />
-    <link rel="manifest" href="/site.webmanifest" />
-    <title>CSS Custom Properties</title>
-    <link rel="stylesheet" href="styles/normalize-fwd.css">
-    <link rel="stylesheet" href="styles/style.css">
-    <script src="scripts/script.js" defer></script>
-    <script src="https://code.iconify.design/iconify-icon/3.0.0/iconify-icon.min.js"></script>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="CSS Custom Properties" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <title>CSS Custom Properties</title>
+  <link rel="stylesheet" href="styles/normalize-fwd.css">
+  <link rel="stylesheet" href="styles/style.css">
+  <script src="scripts/script.js" defer></script>
+  <script src="https://code.iconify.design/iconify-icon/3.0.0/iconify-icon.min.js"></script>
 </head>
 <body>
-    <header class="navigation">
-        <section class="logo-hamburger">
-            <div class="logo">
-                <p class="logo-favicon"><a href="index.html"><img src="favicon-96x96.png" alt="CSS Custom Properties logo"></a></p>
-                <p class="logo-title"><a href="index.html">CSS Custom<br>
-                    Properties</a></p>
+  <header class="navigation">
+    <section class="logo-hamburger">
+      <div class="logo">
+        <p class="logo-favicon"><a href="index.html"><img src="favicon-96x96.png" alt="CSS Custom Properties logo"></a></p>
+        <p class="logo-title"><a href="index.html">CSS Custom<br>
+          Properties</a></p>
+      </div>
+
+      <div class="hamburger" id="hamburger">
+        <span class="bar1"></span>
+        <span class="bar2"></span>
+        <span class="bar3"></span>
+      </div>
+    </section>
+
+    <nav class="menu">
+      <ul id="menu-list">
+        <li><a href="#welcome-section">
+          <iconify-icon icon="mynaui:home"></iconify-icon>Welcome</a></li>
+        <li><a href="#intro">
+          <iconify-icon icon="iconoir:page"></iconify-icon>Introduction</a></li>
+        <li><a href="#importance">
+          <iconify-icon icon="proicons:sparkle-2"></iconify-icon>Why They Matter</a></li>
+        <li><a href="#practical-reasons">
+          <iconify-icon icon="iconoir:suitcase"></iconify-icon>Practical Reasons</a></li>
+        <li><a href="#features">
+          <iconify-icon icon="ri:stack-line"></iconify-icon>Features</a></li>
+        <li><a href="#pros-cons">
+          <iconify-icon icon="material-symbols:balance"></iconify-icon>Pros/Cons</a></li>
+        <li><a href="#credits">
+          <iconify-icon icon="ic:baseline-copyright"></iconify-icon>Credits</a></li>
+      </ul>
+    </nav>
+    <div class="nav-footer"> <!--Desktop-only-footer-->
+      <p><iconify-icon icon="ic:baseline-copyright"></iconify-icon> 2025 CSS Props Group 4</p>
+    </div>
+  </header>
+
+  <main>
+    <!--WELCOME-SECTION-->
+    <section id="welcome-section">
+      <div class="welcome-content">
+        <div class="content">
+          <div class="logo-title-container">
+            <div class="logo-wrapper">
+              <img src="welcome-page-logo.svg" alt="logo for welcome page" class="homepage-logo">
             </div>
-
-            <div class="hamburger" id="hamburger">
-                 <span class="bar1"></span>
-                 <span class="bar2"></span>
-                 <span class="bar3"></span>
+            <div class="title-wrapper">
+              <h1>CSS Custom Properties</h1>
             </div>
-        </section>
-
-        <nav class="menu">
-            <ul id="menu-list">
-                <li><a href="#welcome-section">
-                    <iconify-icon icon="mynaui:home"></iconify-icon>Welcome</a></li>
-                <li><a href="#intro">
-                    <iconify-icon icon="iconoir:page"></iconify-icon>Introduction</a></li>
-                <li><a href="#importance">
-                    <iconify-icon icon="proicons:sparkle-2"></iconify-icon>Why They Matter</a></li>
-<li><a href="#practical-reasons">
-  <iconify-icon icon="iconoir:suitcase"></iconify-icon>Practical Reasons</a></li> 
-
-<li><a href="#features">
-  <iconify-icon icon="ri:stack-line"></iconify-icon>Features</a></li>
-
-                <li><a href="#pros-cons">
-                    <iconify-icon icon="material-symbols:balance"></iconify-icon>Pros/Cons</a></li>
-                <li><a href="#credits">
-                    <iconify-icon icon="ic:baseline-copyright"></iconify-icon>Credits</a></li>
-            </ul>
-        </nav>
-        <div class="nav-footer"> <!--Desktop only footer-->
-            <p><iconify-icon icon="ic:baseline-copyright"></iconify-icon> 2025 CSS Props Group 4</p>
+          </div>
+          <h2 class="group-name">FWDP 2000 Web Development 2 Project 1 Group 4</h2>
+          <div class="names-container">
+            <div class="name">Krishiv</div>
+            <div class="name">Anna</div>
+            <div class="name">Faith</div>
+            <div class="name">Cloue</div>
+          </div>
         </div>
-    </header>
-
-    <main>
-         <!--WELCOME SECTION-->
-        <section id="welcome-section">
-            <div class="welcome-content">
-                <div class="content">
-                    <div class="logo-title-container">
-                        <div class="logo-wrapper">
-                            <img src="welcome-page-logo.svg" alt="logo for welcome page" class="homepage-logo">
-                        </div>
-                        <div class="title-wrapper">
-                            <h1>CSS Custom Properties</h1>
-                        </div>
-                    </div>
-                    <h2 class="group-name">FWDP 2000 Web Development 2 Project 1 Group 4</h2>
-                    <div class="names-container">
-                        <div class="name">Krishiv</div>
-                        <div class="name">Anna</div>
-                        <div class="name">Faith</div>
-                        <div class="name">Cloue</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- INTRODUCTION SECTION -->
-        <section class="intro" id="intro">
-            <h1>An Introduction to CSS Custom Properties</h1>
-            <article class="introduction">
-                <div class="intro-polaroid">
-                    <pre class="code-block"><code>:root { 
-                        <br> --main-color
-               }</code></pre>
-                    <h2 class="intro-sub">What are CSS Custom properties (also called CSS Variables)?</h2>
-                    <p class="intro-info">They are values that can be reused throughout your styles and defined once. When declaring your custom property, they always start with two dashes and are assigned a value (e.g. --main-color). This will also need to be used with the var() function. To store your values, it is common practice to define the variables on :root for easy management of colours, fonts, and spacing across your whole website.</p>
-                </div>
-            </article>
-        </section>
-
-       <!-- KRISHIV'S SECTION -->
-<section id="krishiv" class="dark-mode">
-  <!-- your existing Krishiv content here -->
-</section>
-
-<!-- PRACTICAL REASONS SECTION -->
-<section id="practical-reasons">
-  <h1>Practical Reasons</h1>
-  <p>Here are some of the most common ways developers benefit from CSS custom properties in real projects:</p>
-
-  <div class="reason-grid">
-    <div class="reason-card">
-      <div class="icon">⚡</div>
-      <h3>Dark Mode</h3>
-      <p>Easily switch entire color themes with just a few variable changes.</p>
-    </div>
-
-    <div class="reason-card">
-      <div class="icon">🎨</div>
-      <h3>Colors</h3>
-      <p>Maintain consistent colors across your whole site effortlessly.</p>
-    </div>
-
-    <div class="reason-card">
-      <div class="icon">🖋</div>
-      <h3>Typography</h3>
-      <p>Adjust fonts and sizes globally with one variable update.</p>
-    </div>
-
-    <div class="reason-card">
-      <div class="icon">📱</div>
-      <h3>Responsive Layouts</h3>
-      <p>Make mobile and desktop adjustments quickly using shared variables.</p>
-    </div>
-  </div>
-</section>
-
-<!-- FEATURES SECTION -->
-<section id="features">
-  <h1>Key Features</h1>
-  <p>CSS custom properties make styling easier, faster, and more scalable.</p>
-
-  <div class="reason-grid">
-    <div class="reason-card">
-      <div class="icon">🔁</div>
-      <h3>Reusable</h3>
-      <p>Define once, use everywhere for consistent styling.</p>
-    </div>
-
-    <div class="reason-card">
-      <div class="icon">🧩</div>
-      <h3>Modular</h3>
-      <p>Change specific variables without breaking other styles.</p>
-    </div>
-
-    <div class="reason-card">
-      <div class="icon">🚀</div>
-      <h3>Efficient</h3>
-      <p>Less code repetition means faster development and cleaner CSS.</p>
-    </div>
-
-    <div class="reason-card">
-      <div class="icon">🌈</div>
-      <h3>Dynamic</h3>
-      <p>Work smoothly with JavaScript for live color or theme changes.</p>
-    </div>
-  </div>
-</section>
-
-
-
-        
-        
-
-        <!-- PROS-CONS-SECTION -->
-        <section class="pros-cons" id="pros-cons">
-            <article class="pros">
-                <h1>Pros</h1>
-
-                <p class="pros-box"><strong>Easy to read.</strong> Custom variables allow developers to add meaningful names to provide context for their variable.</li></p>
-                <p class="pros-box"><strong>Easy to update.</strong> Since custom variables are targeted at the root, it allows developers to change styling properties in one place and have it applied throughout.</p>
-                <p class="pros-box"><strong>Responsive design.</strong> Can be overwritten in media queries with functions such as <code>calc()</code>.</p>
-                <p class="pros-box"><strong>Fallback values.</strong> Similar to fonts, developers can set fallback values for their variables.</p>
-                <div class="pros-box-change"><strong>Can be used with Javascript.</strong> Developers can target custom variables in their Javascript. This container is coded with a custom variable. Try changing the colour of it below!
-
-                    <div class="change-me">
-                        <span>Pick a color:</span>
-                        <input id="color" type="color" value="#ffffff">
-                    </div>
-                </div>
-        
-            </article>
-
-            <article class="cons">
-                <h1>Cons</h1>
-                <p class="cons-box"><strong>Overuse.</strong> Custom variables are great for global specifications such as naming primary, secondary, and accent colours, but overuse may complicate the code.</p>
-                <p class="cons-box"><strong>Improper naming.</strong> With the freedom to label custom variables with anything, improper naming conventions may lead to confusing codes, especially when working with a team of developers across several projects.</p>
-                <p class="cons-box"><strong>Impact on performance.</strong> Overuse of custom variables can slow down performance during browser rendering.</p>
-                <p class="cons-box"><strong>Browser compatibility.</strong> Older versions of Chrome, Firefox, Safari, and Opera, along with all versions of Internet Explorer currently do not support custom variables.</p>
-            </article>
-        </section>
-
-        <!-- ---------------- CREDITS SECTION ---------------- -->
-<section id="credits" class="dark-mode">
-  <h1>Credits & References</h1>
-  
-  <!-- Big rectangle for credit cards -->
-  <div class="big-rectangle">
-
-    <div class="reason-cards">
-      <div class="card">
-        <h3>Should I Use CSS Variables</h3>
-        <p>Medium article exploring the benefits and implementation of CSS variables.</p>
-        <a href="https://medium.com/@aicontentpace/should-i-use-css-variables-2f87f1360f6a" target="_blank">Read More</a>
       </div>
+    </section>
 
-      <div class="card">
-        <h3>A Complete Guide to Custom Properties</h3>
-        <p>CSS-Tricks guide covering all you need to know about CSS custom properties.</p>
-        <a href="https://css-tricks.com/a-complete-guide-to-custom-properties/" target="_blank">Read More</a>
+    <!--INTRODUCTION-SECTION-->
+    <section class="intro" id="intro">
+      <h1>An Introduction to CSS Custom Properties</h1>
+      <article class="introduction">
+        <div class="intro-polaroid">
+          <pre class="code-block"><code>:root {
+            <br> --main-color
+          }</code></pre>
+          <h2 class="intro-sub">What are CSS Custom properties (also called CSS Variables)?</h2>
+          <p class="intro-info">They are values that can be reused throughout your styles and defined once. When declaring your custom property, they always start with two dashes and are assigned a value (e.g. --main-color). This will also need to be used with the var() function. To store your values, it is common practice to define the variables on :root for easy management of colours, fonts, and spacing across your whole website.</p>
+        </div>
+      </article>
+    </section>
+
+    <!--PRACTICAL-REASONS-SECTION-->
+    <section id="practical-reasons">
+      <h1>Practical Reasons</h1>
+      <p>Here are some of the most common ways developers benefit from CSS custom properties in real projects:</p>
+
+      <div class="reason-grid">
+        <div class="reason-card">
+          <div class="icon">⚡</div>
+          <h3>Dark Mode</h3>
+          <p>Easily switch entire color themes with just a few variable changes.</p>
+        </div>
+
+        <div class="reason-card">
+          <div class="icon">🎨</div>
+          <h3>Colors</h3>
+          <p>Maintain consistent colors across your whole site effortlessly.</p>
+        </div>
+
+        <div class="reason-card">
+          <div class="icon">🖋</div>
+          <h3>Typography</h3>
+          <p>Adjust fonts and sizes globally with one variable update.</p>
+        </div>
+
+        <div class="reason-card">
+          <div class="icon">📱</div>
+          <h3>Responsive Layouts</h3>
+          <p>Make mobile and desktop adjustments quickly using shared variables.</p>
+        </div>
       </div>
+    </section>
 
-      <div class="card">
-        <h3>CSS Variables Gone Wrong: Pitfalls to Watch Out For</h3>
-        <p>PixelFreeStudio Blog by Abir Das on common pitfalls when using CSS variables.</p>
-        <a href="https://blog.pixelfreestudio.com/css-variables-gone-wrong-pitfalls-to-watch-out-for/" target="_blank">Read More</a>
+    <!--FEATURES-SECTION-->
+    <section id="features">
+      <h1>Key Features</h1>
+      <p>CSS custom properties make styling easier, faster, and more scalable.</p>
+      <div class="reason-grid">
+        <div class="reason-card">
+          <div class="icon">🔁</div>
+          <h3>Reusable</h3>
+          <p>Define once, use everywhere for consistent styling.</p>
+        </div>
+        <div class="reason-card">
+          <div class="icon">🧩</div>
+          <h3>Modular</h3>
+          <p>Change specific variables without breaking other styles.</p>
+        </div>
+        <div class="reason-card">
+          <div class="icon">🚀</div>
+          <h3>Efficient</h3>
+          <p>Less code repetition means faster development and cleaner CSS.</p>
+        </div>
+        <div class="reason-card">
+          <div class="icon">🌈</div>
+          <h3>Dynamic</h3>
+          <p>Work smoothly with JavaScript for live color or theme changes.</p>
+        </div>
       </div>
-    </div>
+    </section>
 
-  </div> <!-- end big rectangle -->
-</section>
+    <!--PROS-CONS-SECTION-->
+    <section class="pros-cons" id="pros-cons">
 
-    </main>
+      <article class="pros">
+        <h1>Pros</h1>
+        <p class="pros-box"><strong>Easy to read.</strong> Custom variables allow developers to add meaningful names to provide context for their variable.</p>
+        <p class="pros-box"><strong>Easy to update.</strong> Since custom variables are targeted at the root, it allows developers to change styling properties in one place and have it applied throughout.</p>
+        <p class="pros-box"><strong>Responsive design.</strong> Can be overwritten in media queries with functions such as <code>calc()</code>.</p>
+        <p class="pros-box"><strong>Fallback values.</strong> Similar to fonts, developers can set fallback values for their variables.</p>
+        <div class="pros-box-change"><strong>Can be used with Javascript.</strong> Developers can target custom variables in their Javascript. This container is coded with a custom variable. Try changing the colour of it below!
+          <div class="change-me">
+            <span>Pick a color:</span>
+            <input id="color" type="color" value="#ffffff">
+          </div>
+        </div>
+      </article>
 
-    <footer class="site-footer">
-        <p><iconify-icon icon="ic:baseline-copyright"></iconify-icon> 2025 CSS Props Group 4</p>
-    </footer>
+      <article class="cons">
+        <h1>Cons</h1>
+        <p class="cons-box"><strong>Overuse.</strong> Custom variables are great for global specifications such as naming primary, secondary, and accent colours, but overuse may complicate the code.</p>
+        <p class="cons-box"><strong>Improper naming.</strong> With the freedom to label custom variables with anything, improper naming conventions may lead to confusing codes, especially when working with a team of developers across several projects.</p>
+        <p class="cons-box"><strong>Impact on performance.</strong> Overuse of custom variables can slow down performance during browser rendering.</p>
+        <p class="cons-box"><strong>Browser compatibility.</strong> Older versions of Chrome, Firefox, Safari, and Opera, along with all versions of Internet Explorer currently do not support custom variables.</p>
+      </article>
+    </section>
+
+    <!--CREDITS-SECTION-->
+    <section id="credits" class="dark-mode">
+      <h1>Credits & References</h1>
+      <div class="big-rectangle">
+        <div class="reason-cards">
+          <div class="card">
+            <h3>Should I Use CSS Variables</h3>
+            <p>Medium article exploring the benefits and implementation of CSS variables.</p>
+            <a href="https://medium.com/@aicontentpace/should-i-use-css-variables-2f87f1360f6a" target="_blank">Read More</a>
+          </div>
+          <div class="card">
+            <h3>A Complete Guide to Custom Properties</h3>
+            <p>CSS-Tricks guide covering all you need to know about CSS custom properties.</p>
+            <a href="https://css-tricks.com/a-complete-guide-to-custom-properties/" target="_blank">Read More</a>
+          </div>
+          <div class="card">
+            <h3>CSS Variables Gone Wrong: Pitfalls to Watch Out For</h3>
+            <p>PixelFreeStudio Blog by Abir Das on common pitfalls when using CSS variables.</p>
+            <a href="https://blog.pixelfreestudio.com/css-variables-gone-wrong-pitfalls-to-watch-out-for/" target="_blank">Read More</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <footer class="site-footer">
+    <p><iconify-icon icon="ic:baseline-copyright"></iconify-icon> 2025 CSS Props Group 4</p>
+  </footer>
 </body>
 </html>
