@@ -269,9 +269,7 @@ p{ font-size: var(--mobile-paragraph);}
   }
 }
 
-/*HOMEPAGE*/
-/* Welcome Section */
-
+/*-------------Welcome-Section-------------*/
 #welcome-section {
   height: 100vh;
   display: flex;
@@ -279,8 +277,6 @@ p{ font-size: var(--mobile-paragraph);}
   justify-content: center;
   width: 100%;
 }
-
-
 
 .welcome-content {
   background-color: var(--light-secondary);
@@ -373,18 +369,14 @@ p{ font-size: var(--mobile-paragraph);}
 }
 
 
-/* FAITH'S SECTION */
+/*-------------Introduction-------------*/
 
-
-  .intro h1,
-  .importance h1{
+  .intro h1{
     text-align: center;
     color: var(--light-text);
     font-size: var(--mobile-h1);
     margin-top: calc(var(--spacing-xs) * 5);     
-  margin-bottom: calc(var(--spacing-xs) * 3);
-    
-
+    margin-bottom: calc(var(--spacing-xs) * 3);
   }
 
   .intro-polaroid {
@@ -409,9 +401,92 @@ p{ font-size: var(--mobile-paragraph);}
   }
     .code-block{
     background-color: var(--secondary-accent);
-     padding: calc(var(--spacing-xs) * 12) calc(var(--spacing-xs) * 2);
+    padding: calc(var(--spacing-xs) * 12) calc(var(--spacing-xs) * 2);
   }
 
+/* ----------------Why-they-matter--------------- */
+
+.importance h1 {
+  background-color: var(--light-secondary);
+  padding:2rem 1rem;
+  margin:2rem 0;
+  
+}
+.importance{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.section-container{
+  display: flex;
+  overflow-x: auto;
+  flex-wrap: nowrap;  
+  gap: 1.5rem;         
+  padding-bottom: 1rem;
+  margin:0 1rem;
+}
+
+.importance-box{
+  padding: 32px;
+  background-color: var(--light-secondary);
+  display: flex;
+  flex-direction: column;
+  height: 22.5rem;
+  width: 18.75rem;
+  border-radius: 1rem;;
+}
+
+/* Custom Scrollbar Styling */
+.section-container::-webkit-scrollbar {
+  height: 12px;
+}
+
+.section-container::-webkit-scrollbar-track {
+  background: var(--secondary-accent);
+  border-radius: 2px;
+}
+
+.section-container::-webkit-scrollbar-thumb {
+  background: var(--dark-background);
+  border-radius: 2px;
+}
+
+
+.section-container::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+  border-radius: 2px;
+}
+
+/* For Firefox */
+.section-container {
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary-accent) var(--light-secondary);
+}
+
+@media (min-width: 68em) {
+  
+  .section-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    overflow-x: visible;
+    flex-wrap: unset; 
+  }
+  
+  .importance-box {
+    width: auto;
+    border: 4px solid var(--border);
+  }
+
+  .importance h1 {
+    padding:4rem 20rem;
+  }
+
+  .section-container{
+    margin:0 20rem;
+  }
+
+}
 /* ---------------- PRACTICAL REASONS & FEATURES STYLES ---------------- */
 
 #practical-reasons, #features {

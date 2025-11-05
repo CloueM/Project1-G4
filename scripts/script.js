@@ -24,7 +24,6 @@ function setActiveLink() {
     
     sections.forEach(section => {
         const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
         
         // Check if section is in viewport (with some offset for better UX)
         if (window.scrollY >= sectionTop - 200) {
