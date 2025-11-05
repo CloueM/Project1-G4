@@ -4,7 +4,7 @@
   - Define light and dark color values as CSS variables in :root
   - JavaScript toggles a data-theme attribute on the <html> element
   - CSS updates the generic variables based on the theme
-  - NO hardcoded colors!
+  - NO hardcoded colors
    ============================================================ */
 
 :root {
@@ -123,6 +123,7 @@ html[data-theme="dark"] .moon-icon {
   transform: rotate(0deg);
 }
 /*---------------------THEME-TOGGLE-BUTTON-END---------------------*/
+
 /*---------------------Global stlyes---------------------*/
 html {
   scroll-behavior: smooth;
