@@ -389,158 +389,82 @@ main > section {
      padding: calc(var(--spacing) * 12) calc(var(--spacing) * 2);
   }
 
-/* START OF WHY DO THEY MATTER SECTION*/
-.importance {
-    
-  display: flex;
-  flex-direction: column;
-  align-items: center; 
+/* ---------------- PRACTICAL REASONS & FEATURES STYLES ---------------- */
 
-}
-
-.importance-box {
-  width: var( --card-width);
-  height: var( --card-height);
-  flex-shrink: 0;
-  border: var(--border-width) solid var(--primary-accent);
-  background-color: var(--secondary-accent);
-  border-radius: calc(var(--spacing)*1);
-  padding: calc(var(--spacing)*2);
-  margin-bottom: calc(var(--spacing)*2);
-  box-shadow: 0 calc(var(--spacing) * 0.5) calc(var(--spacing) * 1) rgba(0, 0, 0, 0.1);
-  
-}
-
-.reason{
- color:var(--primary-accent);
- text-align: center;
-}
-
-/* MEDIA QUERY */
-@media (min-width: 68em) {
-  .intro h1,
-  .importance h1 {
-  font-size: var( --desktop-h1);
-  width: 100%;
+#practical-reasons, #features {
+  padding: 4rem 2rem;
   text-align: center;
-  line-height: 1.6;
-  margin-bottom: calc(var(--spacing) * 4);
-
+  background-color: var(--light-background);
+  color: var(--light-text);
 }
 
- .intro-polaroid {
- 
-    padding: calc(var(--spacing) * 5);
-    width:100%;
-    max-width: 800px;
-    
+#practical-reasons h1, 
+#features h1 {
+  font-size: var(--desktop-h1);
+  color: var(--primary-accent);
+  margin-bottom: 1rem;
+}
+
+#practical-reasons p, 
+#features p {
+  max-width: 700px;
+  margin: 0 auto 3rem;
+  font-size: var(--desktop-paragraph);
+  color: var(--charcoal);
+}
+
+.reason-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.reason-card {
+  background-color: var(--light-secondary);
+  border: 2px solid var(--border);
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  cursor: pointer;
+}
+
+.reason-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.reason-card .icon {
+  font-size: 2.5rem;
+  color: var(--primary-accent);
+  margin-bottom: 1rem;
+}
+
+.reason-card h3 {
+  color: var(--primary-accent);
+  margin-bottom: 0.5rem;
+}
+
+.reason-card p {
+  color: var(--charcoal);
+  font-size: var(--mobile-paragraph);
+}
+
+@media (prefers-color-scheme: dark) {
+  #practical-reasons, #features {
+    background-color: var(--dark-background);
+    color: var(--dark-text);
   }
 
-  .code-block{
-  font-size:var( --mobile-h2);
-}
-
-.intro-sub,
-.reason {
-  font-size:var(--desktop-h2);
-}
-
-.intro-info,
-.reason-explanation{
-    font-size: var(--desktop-paragraph);
-  
-}
-
-
-.importance {
-  --card-width: calc(var(--spacing)* 42);
-  --card-height:calc(var(--spacing)* 50);
-  display: flex;
-  flex-direction: row;
-  flex-wrap:wrap;
-  justify-content:center;
-  gap: calc(var(--spacing) * 3); 
-  padding: calc(var(--spacing) * 4);
-  margin: calc(var(--spacing) * 8);
-
-}
-
-.importance-box {
-  transition: box-shadow 0.3 ease, transform 0.3 ease;
-}
-
-.importance-box:hover {
-  box-shadow: 0 0 20px var(--primary-accent); 
-  transform: scale(1.02);
-}
-
-
-
-}
-
-.card {
-  background-color: var(--primary);
-  border: solid 0.25rem #EBE8FF;
-  border-radius: calc(var(--spacing) * 1);
-  padding: calc(var(--spacing) * 3);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-}
-
-.card .icon {
-  font-size: calc(var(--spacing) * 5);
-  margin-bottom: calc(var(--spacing) * 2);
-}
-
-.card h3 {
-  margin: 0.5rem 0;
-  color: var(--accent);
-}
-
-.card p {
-  font-size: calc(var(--spacing) * 2);
-  line-height: 1.5;
-}
-
-/* ---------------- PRACTICAL SUMMARY POLAROID ---------------- */
-.practical-summary-card {
-  background-color: var(--primary);
-  border: solid 0.25rem #EBE8FF;
-  border-radius: calc(var(--spacing) * 1);
-  padding: calc(var(--spacing) * 3);
-  text-align: center;
-  font-size: calc(var(--spacing) * 2);
-  font-weight: bold;
-  margin: calc(var(--spacing) * 4) auto 0 auto;
-  max-width: 600px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.practical-summary-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-}
-
-/* ---------------- RESPONSIVE ---------------- */
-@media (min-width: 68em) {
-  .reason-cards {
-    flex-direction: row;
-    justify-content: space-between;
+  .reason-card {
+    background-color: var(--dark-secondary);
+    border-color: var(--charcoal);
   }
 
-  .card {
-    flex: 1 1 calc(25% - calc(var(--spacing) * 3));
-    max-width: 250px;
+  .reason-card:hover {
+    box-shadow: 0 10px 25px rgba(255,255,255,0.1);
   }
 }
 
