@@ -43,6 +43,8 @@
 /*---------------------Global stlyes---------------------*/
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
+  max-width: 100%;
 }
 
 body {
@@ -50,11 +52,14 @@ body {
     color: var(--light-text);
     font-family: "DM Sans", sans-serif;
     font-size: var(--mobile-paragraph);
+    overflow-x: hidden;
+    margin: 0;
+    max-width: 100%;
 }
 
 /* Making sure that each section max height is the screen size */
 main > section {
-  height: 100vh;
+  height: 100%;
 }
 
 h1{ font-size: var(--mobile-h1);}
@@ -418,7 +423,7 @@ p{ font-size: var(--mobile-paragraph);}
   justify-content: center;
 }
 
-.section-container{
+.section-container{ 
   display: flex;
   overflow-x: auto;
   flex-wrap: nowrap;  
@@ -427,14 +432,18 @@ p{ font-size: var(--mobile-paragraph);}
   margin:0 1rem;
 }
 
+.why-it-matters {
+  flex-shrink: 0;
+}
+
 .importance-box{
-  padding: 32px;
+  padding: 2rem;
   background-color: var(--light-secondary);
   display: flex;
   flex-direction: column;
-  height: 22.5rem;
+  min-height: 22.5rem;
   width: 18.75rem;
-  border-radius: 1rem;;
+  border-radius: 1rem;
 }
 
 /* Custom Scrollbar Styling */
@@ -444,23 +453,24 @@ p{ font-size: var(--mobile-paragraph);}
 
 .section-container::-webkit-scrollbar-track {
   background: var(--secondary-accent);
-  border-radius: 10px;
+  border-radius: 2px;
 }
 
 .section-container::-webkit-scrollbar-thumb {
-  background: var(--primary-accent);
-  border-radius: 10px;
+  background: var(--dark-background);
+  border-radius: 2px;
 }
 
+
 .section-container::-webkit-scrollbar-thumb:hover {
-  background: var(--dark-background);
-  border-radius: 10px;
+  background: var(--accent);
+  border-radius: 2px;
 }
 
 /* For Firefox */
 .section-container {
   scrollbar-width: thin;
-  scrollbar-color: var(--primary-accent) var(--secondary-accent);
+  scrollbar-color: var(--primary-accent) var(--light-secondary);
 }
 
 @media (min-width: 68em) {
@@ -468,21 +478,29 @@ p{ font-size: var(--mobile-paragraph);}
   .section-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 1fr;
     overflow-x: visible;
-    flex-wrap: unset; 
+    flex-wrap: unset;
+    align-items: stretch;
+  }
+  
+  .why-it-matters {
+    display: flex;
   }
   
   .importance-box {
-    width: auto;
-    border: 4px solid var(--border);
+    width: 100%;
+    height: 100%;
+    min-height: 20rem;
   }
 
   .importance h1 {
-    padding:4rem 20rem;
+    padding:4rem 5rem;
+
   }
 
   .section-container{
-    margin:0 20rem;
+    margin:0 5rem;
   }
 
 }
